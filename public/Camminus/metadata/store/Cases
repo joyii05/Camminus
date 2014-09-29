@@ -1,0 +1,36 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "Cases",
+        "leadingBufferZone": 300,
+        "model": "Case",
+        "pageSize": 30,
+        "remoteSort": true,
+        "storeId": "Cases"
+    },
+    "designerId": "ab6d4d2a-3e88-46f6-87e1-8bfcb6a73d02",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "casenumberSorter",
+                "direction": null,
+                "property": "case_number",
+                "root": null
+            },
+            "name": "MySorter6",
+            "designerId": "e374f8ca-5415-48e2-a3ba-ffaf06f038de"
+        }
+    ]
+}

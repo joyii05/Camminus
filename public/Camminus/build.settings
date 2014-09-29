@@ -1,0 +1,7 @@
+{
+    "webBuild": {
+        "environment": "production",
+        "clean": "on",
+        "publishPath": "/Volumes/Genes/Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/Production"
+    }
+}

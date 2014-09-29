@@ -1,0 +1,523 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyBorder": true,
+        "designer|userAlias": "casesgrid",
+        "designer|userClassName": "cases.Grid",
+        "header": false,
+        "height": 315,
+        "itemId": "",
+        "store": "Cases",
+        "title": "Clientes",
+        "width": 1233
+    },
+    "designerId": "585c7c57-2f3f-4abb-99cd-ea70de4ba76f",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "CostumerGridTopToolbar",
+                "dock": "top",
+                "itemId": "toptoolBar",
+                "ui": "footer"
+            },
+            "name": "MyToolbar10",
+            "designerId": "66c942bd-7109-47b5-b3be-713ea27f543d",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "case_number",
+                        "emptyText": null,
+                        "enableKeyEvents": true,
+                        "fieldLabel": "Label",
+                        "hideLabel": true,
+                        "hideTrigger": true,
+                        "itemId": "searchgrid",
+                        "layout|flex": null,
+                        "listConfig": [
+                            "{",
+                            "    loadingText: 'Buscando...',",
+                            "    emptyText: 'Nenhum resultado...'",
+                            "}"
+                        ],
+                        "minChars": 1,
+                        "store": "Cases",
+                        "triggerCls": "x-form-clear-trigger",
+                        "typeAhead": true,
+                        "width": 270
+                    },
+                    "name": "MyComboBox12",
+                    "configAlternates": {
+                        "listConfig": "object"
+                    },
+                    "designerId": "abec22aa-078d-4fa3-a473-bb37a8e92d89",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "listConfig",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTriggerClick",
+                                "implHandler": [
+                                    "this.clearValue();",
+                                    "this.getStore().load();",
+                                    "this.hideTrigger = true;",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "onTriggerClick",
+                            "designerId": "3c0f50cd-80ec-4d68-a5c7-09f17aa1b297"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSearchgridKeyup",
+                                "implHandler": [
+                                    "var store = this.getStore();",
+                                    "",
+                                    "if (textfield.rawValue === ''){",
+                                    "    store.load();",
+                                    "    textfield.hideTrigger = true;",
+                                    "}",
+                                    "else{",
+                                    "    textfield.hideTrigger = false;",
+                                    "}"
+                                ],
+                                "name": "keyup",
+                                "scope": "me"
+                            },
+                            "name": "onSearchgridKeyup",
+                            "designerId": "d500ebf8-a839-4b0b-8955-c6e82946a608"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSearchgridSelect",
+                                "implHandler": [
+                                    "var store = this.getStore();",
+                                    "",
+                                    "store.load({",
+                                    "  params: {query: records[0].data.case_number}",
+                                    "});",
+                                    ""
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "name": "onSearchgridSelect",
+                            "designerId": "11778a9d-56d5-456b-9f2d-53df5b4ead8e"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 16,
+                        "imgCls": "search",
+                        "layout|flex": null,
+                        "width": 16
+                    },
+                    "name": "MyImg7",
+                    "designerId": "0cbfc4c6-d926-4d53-974f-0d946acf2e0a"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "HeaderFill",
+                        "layout|flex": null
+                    },
+                    "name": "MyFill8",
+                    "designerId": "b452f9fe-c859-4ff1-89ec-3036f8dee886"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": "right",
+                        "iconCls": "add-button",
+                        "itemId": "addCase",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton34",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "894b45bc-ecc7-489e-bbb6-aded72c978e5",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processAddCase",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_new;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processAddCase",
+                            "designerId": "5165ada7-eff4-4a93-94e2-3636afbf61e1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "iconAlign": "right",
+                        "iconCls": "edit-button",
+                        "itemId": "editCase",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton35",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "548d662e-db0d-4f62-8f14-2d1b6506d68b",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processEditCase",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_edit;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processEditCase",
+                            "designerId": "2928c075-a084-48f3-a1f2-905e2a77ab92"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "iconAlign": "right",
+                        "iconCls": "delete-button",
+                        "itemId": "deleteCase",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton36",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "7edd33bc-2927-4541-baac-bd06ee12d907",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processDeleteCase",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_delete;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processDeleteCase",
+                            "designerId": "623abb07-9b8e-45da-ae15-5a63adaa275f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": "right",
+                        "iconCls": "refresh-button",
+                        "itemId": "refreshCase",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton37",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "9ad1cf68-b62d-4da7-b8e8-e0f80ae2574d",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processRefreshCase",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_refresh;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processRefreshCase",
+                            "designerId": "c4ce9a4f-a5bc-4492-b94c-9b49f5c63546"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "UsersGridView",
+                "width": null
+            },
+            "name": "MyGridView4",
+            "designerId": "257ba9a8-9992-45fd-9ac2-e9beb593b800"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "UsersGridToolbar",
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "Cases",
+                "ui": null,
+                "width": 360
+            },
+            "name": "MyPagingToolbar3",
+            "designerId": "28ec4c86-9575-4ee5-a23e-026842efb5ac"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridpanelSelect",
+                "implHandler": [
+                    "this.down('button#editCase').setDisabled(false);",
+                    "this.down('button#deleteCase').setDisabled(false);",
+                    "",
+                    ""
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "name": "onGridpanelSelect",
+            "designerId": "cd026a6f-c972-4b6e-84b6-88bd7d401510"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "case_number",
+                "text": "Número"
+            },
+            "name": "MyColumn17",
+            "designerId": "bb520064-166f-4841-8f46-045938dfb5b2"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "descricao",
+                "flex": 1,
+                "text": "Descrição"
+            },
+            "name": "MyColumn18",
+            "designerId": "cb41e5dd-b5b3-4787-a1ba-dea5aab12532",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "fn": "renderer",
+                        "implHandler": [
+                            "return '<div style=\"white-space:normal !important;\">'+ value +'</div>';"
+                        ]
+                    },
+                    "name": "renderer",
+                    "designerId": "67473bc5-35db-4fef-adc8-3425ed8a5704"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "tipo",
+                "text": "Tipo"
+            },
+            "name": "MyColumn19",
+            "designerId": "2017b2de-3b48-4506-b5c3-c9a0fd8daad7"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "previsao",
+                "text": "Previsão",
+                "width": 75
+            },
+            "name": "MyColumn20",
+            "designerId": "03b2211d-3927-4d90-94b3-8946b8b2225f"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "situacao",
+                "text": "Situação",
+                "width": 150
+            },
+            "name": "MyColumn21",
+            "designerId": "717dad91-a019-42d6-95ba-3f9227e74c87"
+        },
+        {
+            "type": "Ext.grid.column.Date",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "created_at",
+                "defaultWidth": 160,
+                "format": "d/m/Y - H:i:s",
+                "text": "Criada em",
+                "width": 170
+            },
+            "name": "MyDateColumn",
+            "designerId": "68ea3499-1e64-4437-928c-d87159af8543"
+        }
+    ]
+}

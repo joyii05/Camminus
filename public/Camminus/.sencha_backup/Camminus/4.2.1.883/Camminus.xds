@@ -1,0 +1,80 @@
+{
+    "name": "Camminus",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "4.0.1.33",
+            "frameworkVersion": "4.2.1.883"
+        },
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "http://camminus.gen/camminus",
+        "exportPath": "/Users/genesluna/Desktop/Camminus",
+        "buildShouldOverwriteIndex": true,
+        "sdkPath": "",
+        "generateArchitectVersion": true,
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Small",
+                "builtIn": true,
+                "height": 600,
+                "width": 800
+            }
+        },
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        },
+        "displayfield-ExtBox1-3021-inputEl": "Not Installed"
+    },
+    "xdsVersion": "3.0.2",
+    "xdsBuild": 1375,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "af8d5195-e218-4358-9313-3f35aaed2add",
+            "ac6d2e9f-c3a8-4637-93ca-ed505d6db31e",
+            "bcc666be-6872-4ac4-bda1-755c9983e908",
+            "8dbe77f3-b224-411f-9613-fdb3bc8c7daa",
+            "0744d852-2d4c-4426-a190-ef68850e4a77",
+            "1e258cb2-9f7d-4ec2-b9d7-e1a150e6dd92",
+            "e8a8e9d3-1e27-4e61-a203-dff48b0ed8e0",
+            "8df21c85-a90e-46c6-b7b6-3b834dbb3c76",
+            "98e8a108-65f0-4c0e-b3df-474cd00cf0cf",
+            "24ef97fa-9f5f-4035-b013-e58940e252a5",
+            "b6329086-9f80-4137-a0c6-f31a89d9546b"
+        ],
+        "store": [
+            "4f23bd78-3d2a-44bb-b1b6-7d61f921c33c",
+            "5b75156b-1b83-4278-b809-48646e942386",
+            "7432dd53-2ae4-4380-a0e7-ed1e0f0eb3bf"
+        ],
+        "controller": [
+            "8e9c3d09-3f79-4245-908c-efd85b62faca",
+            "bff99ba9-482a-42fd-95d7-90dd0b16b4d4",
+            "e4f1ea22-ad81-4e27-ba8f-3c006d1307e3",
+            "f995bd57-d30a-4b34-9c24-d1627beab457"
+        ],
+        "model": [
+            "2fd359b8-6920-4de8-89bb-991b618f536c",
+            "3a3d9d56-b1c2-4e11-9bf5-7ea377b49610",
+            "9679bb1f-7e9b-457e-9700-bb82c9ea72dd",
+            "ebcc3886-f870-4c72-828e-4850faba771e",
+            "9d27e0a4-c397-4ac2-9f7d-bb4d2a593b7b"
+        ],
+        "resource": [
+            "3457f8ab-61d6-4850-a7e1-326b597e90bb",
+            "39daa072-f1dd-4cc7-bdbc-3e3b871df0a8",
+            "2392eeb3-8084-4665-9dcf-6101114c7f51",
+            "4e4a3865-9dc8-4206-8e36-b02c13333356",
+            "3628c177-62a7-4566-a9a7-105a7405f64e"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

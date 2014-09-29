@@ -1,0 +1,48 @@
+.container {
+  position: relative;
+  width: 290mm;
+  height: 196mm;
+  font-size: 12px;
+  font-family: arial, helvetica, verdana, sans-serif; }
+
+.left-content {
+  float: left;
+  width: 541px; }
+  .left-content .ocorrencia {
+    text-align: center; }
+  .left-content form {
+    margin-top: 20px; }
+    .left-content form fieldset {
+      border: solid 1px black;
+      line-height: 25px;
+      -webkit-border-radius: 8px;
+              border-radius: 8px; }
+    .left-content form legend {
+      background-color: #ffffff;
+      padding-left: 6px;
+      padding-right: 6px; }
+    .left-content form input {
+      border: none; }
+  .left-content .total {
+    text-align: right;
+    padding-right: 15px;
+    margin-top: 5px; }
+
+.right-content {
+  margin-left: 581px; }
+  .right-content article {
+    padding-top: 35px;
+    padding-bottom: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 11px; }
+  .right-content .confirmation {
+    margin-top: 10px; }
+  .right-content .assinatura {
+    margin-right: 30px;
+    margin-top: 50px;
+    float: right;
+    text-align: center; }
+
+.footer {
+  text-align: center; }

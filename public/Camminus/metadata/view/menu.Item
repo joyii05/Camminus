@@ -1,0 +1,22 @@
+{
+    "type": "Ext.tree.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": 0,
+        "designer|userAlias": "mainmenuitem",
+        "designer|userClassName": "menu.Item",
+        "hideCollapseTool": true,
+        "icon": null,
+        "iconCls": null,
+        "id": null,
+        "itemId": null,
+        "maxHeight": null,
+        "rootVisible": false,
+        "title": null
+    },
+    "designerId": "e8a8e9d3-1e27-4e61-a203-dff48b0ed8e0"
+}

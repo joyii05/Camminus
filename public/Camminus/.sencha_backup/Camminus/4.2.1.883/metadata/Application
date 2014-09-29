@@ -1,0 +1,155 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Users",
+            "TranslationManager",
+            "Menu",
+            "Roles"
+        ],
+        "name": "Camminus",
+        "splashscreen": [
+            "{}"
+        ],
+        "views": [
+            "MainView",
+            "HeaderToolbar",
+            "FooterToolbar",
+            "users.Form",
+            "Login",
+            "Translation"
+        ]
+    },
+    "configAlternates": {
+        "splashscreen": "object"
+    },
+    "designerId": "application",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "splashscreen",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": "loader",
+                "designer|displayName": "Loader",
+                "enabled": true
+            },
+            "designerId": "1c6d987d-c283-42cc-83a7-212736791890"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var task = new Ext.util.DelayedTask(function() {",
+                    "    splashscreen.fadeOut({",
+                    "        duration: 1000,",
+                    "        remove:true",
+                    "    });",
+                    "",
+                    "    splashscreen.next().fadeOut({",
+                    "        duration: 1000,",
+                    "        remove:true,",
+                    "        listeners: {",
+                    "",
+                    "            afteranimate: function(el, startTime, eOpts) {",
+                    "                Ext.Ajax.request({",
+                    "                    url: '/login',",
+                    "                    success: function(response){",
+                    "",
+                    "                        var retorno = Ext.JSON.decode(response.responseText);",
+                    "",
+                    "                        if(retorno.success){",
+                    "",
+                    "                            Ext.create('Camminus.view.MainView');",
+                    "                        }",
+                    "                        else{",
+                    "                            Ext.create('Camminus.view.Login');",
+                    "                        }",
+                    "",
+                    "                    },",
+                    "",
+                    "                    failure: function(response) {",
+                    "                        Ext.Msg.show({",
+                    "                            title:' Erro!',",
+                    "                            msg: response.responseText,",
+                    "                            icon: Ext.Msg.ERROR,",
+                    "                            buttons: Ext.Msg.OK",
+                    "                        });",
+                    "",
+                    "                    }",
+                    "",
+                    "                });",
+                    "",
+                    "            }",
+                    "",
+                    "        }",
+                    "",
+                    "    });",
+                    "",
+                    "});",
+                    "",
+                    "",
+                    "Ext.define( 'UserData', {",
+                    "",
+                    "    singleton: true,",
+                    "",
+                    "    config:{",
+                    "        name: undefined,",
+                    "        id: undefined,",
+                    "        role_id: undefined",
+                    "    },",
+                    "",
+                    "    contructor: function(cfg){",
+                    "        this.iniConfig(cfg);",
+                    "    }",
+                    "",
+                    "});",
+                    "",
+                    "task.delay(2000);"
+                ]
+            },
+            "designerId": "9f89b689-30f4-472e-b001-b268cdfcaae4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "implHandler": [
+                    "splashscreen = Ext.getBody().mask(translations.loading_app, 'splashscreen');",
+                    "splashscreen.addCls('splashscreen');",
+                    "",
+                    "Ext.DomHelper.insertFirst(Ext.query('.x-mask-msg')[0], {",
+                    "    cls: 'x-splash-icon'",
+                    "});"
+                ]
+            },
+            "designerId": "413ca171-afc7-4baa-941c-efee3b61f87d"
+        }
+    ]
+}

@@ -1,0 +1,658 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Users",
+        "models": [
+            "User",
+            "Role",
+            "ContractType"
+        ],
+        "requires": [
+            "Camminus.util.MD5"
+        ],
+        "stores": [
+            "Users",
+            "Roles"
+        ],
+        "views": [
+            "users.Form",
+            "users.Grid",
+            "MainPanel",
+            "Login"
+        ]
+    },
+    "designerId": "8e9c3d09-3f79-4245-908c-efd85b62faca",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "usersgrid",
+                "designer|targetType": "users.Grid",
+                "fn": "onUsersGridpanelRender",
+                "implHandler": [
+                    "this.getRolesStore().load();",
+                    "this.getUsersStore().load();",
+                    ""
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "designerId": "3185b1f1-1e57-4fb8-a270-85aaca74ec46"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userForm",
+                "selector": "userform",
+                "xtype": null
+            },
+            "designerId": "679da366-f7d5-4161-9dd4-ff2662c06f55"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "usersgrid button#delete",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onUserDeleteButtonClick",
+                "implHandler": [
+                    "var grid = this.getUsersGrid(),",
+                    "    record = grid.getSelectionModel().getSelection(),",
+                    "    store = grid.getStore();",
+                    "",
+                    "if (store.getCount() >= 2 && record[0]){",
+                    "",
+                    "    Ext.Msg.show({",
+                    "",
+                    "        title: translations.msg_title_delete,",
+                    "        msg: translations.msg_delete,",
+                    "        buttons: Ext.Msg.YESNO,",
+                    "        icon: Ext.Msg.QUESTION,",
+                    "        fn: function (buttonId){",
+                    "",
+                    "            if (buttonId == 'yes'){",
+                    "                store.remove(record);",
+                    "            }",
+                    "        }",
+                    "",
+                    "    });",
+                    "",
+                    "}",
+                    "    else if (store.getCount() == 1) {",
+                    "        Ext.Msg.show({",
+                    "            title: translations.msg_title_warning,",
+                    "            msg: translations.msg_last_user,",
+                    "            buttons: Ext.Msg.OK,",
+                    "            icon: Ext.Msg.WARNING",
+                    "        });",
+                    "    }"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "f2274618-be82-48e1-a420-2db40e01ab95"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "usersGrid",
+                "selector": "usersgrid",
+                "xtype": null
+            },
+            "designerId": "efbaa5cc-3c06-4c17-9867-d60ca0f1831e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "usersgrid",
+                "designer|targetType": "users.Grid",
+                "fn": "onUsersGridpanelItemDblClick",
+                "implHandler": [
+                    "var win = this.getUserForm();",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('userform');",
+                    "}",
+                    "",
+                    "",
+                    "if (record.get('profile_image')) {",
+                    "",
+                    "    var img = win.down('image');",
+                    "    img.setSrc('resources/profileImages/' + record.get('profile_image'));",
+                    "}",
+                    "",
+                    "win.setTitle(record.get('name'));",
+                    "win.down('form').loadRecord(record);",
+                    "win.show();"
+                ],
+                "name": "itemdblclick",
+                "scope": "me"
+            },
+            "designerId": "916b152f-7e3f-4ca0-a1a9-2b104acf182e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "login button#doLogin",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onUserLoginButtonClick",
+                "implHandler": [
+                    "var win    = button.up('window'),",
+                    "    form   = win.down('form').getForm(),",
+                    "    values = form.getFieldValues(),",
+                    "    view   = this.getMainView(),",
+                    "    sb     = button.up();",
+                    "",
+                    "",
+                    "// Set the status bar to show that something is processing:",
+                    "sb.showBusy();",
+                    "",
+                    "if (form.isValid()) {",
+                    "",
+                    "    values.password = Camminus.util.MD5.encode(values.password);",
+                    "",
+                    "    Ext.Ajax.request({",
+                    "",
+                    "        url: '/login/auth',",
+                    "        method: 'POST',",
+                    "        params: {",
+                    "            user_name: values.user_name,",
+                    "            password: values.password",
+                    "        },",
+                    "",
+                    "        success:function(response){",
+                    "",
+                    "            var retorno = Ext.JSON.decode(response.responseText);",
+                    "",
+                    "            if(retorno.success){",
+                    "",
+                    "                sb.setStatus({",
+                    "                    text: translations.user_auth,",
+                    "                    iconCls: 'x-status-valid',",
+                    "                    clear: {",
+                    "                        wait: 5000,",
+                    "                        anim: false,",
+                    "                        useDefaults: false",
+                    "                    }",
+                    "                });",
+                    "",
+                    "                if(!view){",
+                    "                    view = Ext.create('Camminus.view.MainView');",
+                    "",
+                    "                }",
+                    "",
+                    "",
+                    "                button.up('window').hide();",
+                    "            }else{",
+                    "                sb.setStatus({",
+                    "                    text: translations.login_error,",
+                    "                    iconCls: 'x-status-error',",
+                    "                    clear: {",
+                    "                        wait: 5000,",
+                    "                        anim: false,",
+                    "                        useDefaults: false",
+                    "                    }",
+                    "                });",
+                    "            }",
+                    "",
+                    "        },",
+                    "",
+                    "        failure: function(response) {",
+                    "            Ext.Msg.show({",
+                    "                title:' Erro!',",
+                    "                msg: response.responseText,",
+                    "                icon: Ext.Msg.ERROR,",
+                    "                buttons: Ext.Msg.OK",
+                    "            });",
+                    "        }",
+                    "",
+                    "    });",
+                    "",
+                    "}else{",
+                    "",
+                    "    sb.setStatus({",
+                    "        text: translations.mandatory_fields,",
+                    "        iconCls: 'x-status-error',",
+                    "        clear: {",
+                    "            wait: 5000,",
+                    "            anim: false,",
+                    "            useDefaults: false",
+                    "        }",
+                    "    });",
+                    "",
+                    "}",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "fc496940-16a4-40eb-b061-9284d7374222"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userPicture",
+                "selector": "userform image"
+            },
+            "designerId": "9042c44a-a951-4559-ac1c-4ae6ea8f2b37"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "mainview",
+                "xtype": null
+            },
+            "designerId": "80bdaae7-699f-4ee0-82f8-63ff6ead3b56"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview",
+                "designer|targetType": "MainView",
+                "fn": "onMainViewRender",
+                "implHandler": [
+                    "var sessao = Ext.create('Ext.util.TaskRunner');",
+                    "",
+                    "var verificaSessao = sessao.newTask({",
+                    "    run: function () {",
+                    "",
+                    "        Ext.Ajax.request({",
+                    "            url: '/login',",
+                    "            success:function(response){",
+                    "",
+                    "                var retorno = Ext.JSON.decode(response.responseText);",
+                    "",
+                    "                if(!retorno.success){",
+                    "                    Ext.MessageBox.alert('Atenção', 'Sua sessão expirou.', handleExpiration);",
+                    "",
+                    "                }",
+                    "",
+                    "            },",
+                    "",
+                    "            failure: function(response) {",
+                    "                Ext.Msg.show({",
+                    "                    title:' Erro!',",
+                    "                    msg: response.responseText,",
+                    "                    icon: Ext.Msg.ERROR,",
+                    "                    buttons: Ext.Msg.OK",
+                    "                });",
+                    "",
+                    "            }",
+                    "",
+                    "        });",
+                    "",
+                    "    },",
+                    "",
+                    "    interval: 900000",
+                    "",
+                    "});",
+                    "",
+                    "",
+                    "Ext.Ajax.request({",
+                    "    url: '/login',",
+                    "    success:function(response){",
+                    "",
+                    "        var retorno = Ext.JSON.decode(response.responseText);",
+                    "",
+                    "        UserData.setName(retorno.data.name);",
+                    "        UserData.setId(retorno.data.id);",
+                    "",
+                    "",
+                    "        //component.down('#userProfile').setTitle(UserData.getName());",
+                    "        //component.down('#userProfile').setVisible(false);",
+                    "",
+                    "        if(!retorno.success){",
+                    "            var redirect = \"http://\"+window.document.location.host;",
+                    "            window.location = redirect;",
+                    "        }",
+                    "",
+                    "    },",
+                    "",
+                    "    failure: function(response) {",
+                    "        Ext.Msg.show({",
+                    "            title:' Erro!',",
+                    "            msg: response.responseText,",
+                    "            icon: Ext.Msg.ERROR,",
+                    "            buttons: Ext.Msg.OK",
+                    "        });",
+                    "",
+                    "    }",
+                    "",
+                    "",
+                    "});",
+                    "",
+                    "function handleExpiration(){",
+                    "",
+                    "    var redirect = \"http://\"+window.document.location.host;",
+                    "    window.location = redirect;",
+                    "",
+                    "}",
+                    "",
+                    "verificaSessao.start();"
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "designerId": "d2013d80-0eb8-4531-877d-22563a338d54"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userform button#userButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onUserButtonClick",
+                "implHandler": [
+                    "var win    = button.up('window'),",
+                    "    formPanel   = win.down('form'),",
+                    "    record = formPanel.getRecord(),",
+                    "    values = formPanel.getValues(),",
+                    "    store  = this.getUsersStore();",
+                    "",
+                    "",
+                    "",
+                    "if (button.getText() === 'Salvar'){",
+                    "    //console.dir(values);",
+                    "    values.password = Camminus.util.MD5.encode(values.password);",
+                    "    //store.add(values);",
+                    "",
+                    "}",
+                    "",
+                    "",
+                    "",
+                    "if (formPanel.getForm().isValid()) {",
+                    "",
+                    "    formPanel.getForm().submit({",
+                    "        clientValidation: true,",
+                    "        url: '/users',",
+                    "        success: function(form, action) {",
+                    "",
+                    "            var result = action.result;",
+                    "",
+                    "            console.log(result);",
+                    "",
+                    "            if (result.success) {",
+                    "                store.load();",
+                    "                win.close();",
+                    "",
+                    "            } else {",
+                    "               // Packt.util.Util.showErrorMsg(result.msg);",
+                    "            }",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            switch (action.failureType) {",
+                    "                case Ext.form.action.Action.CLIENT_INVALID:",
+                    "                    Ext.Msg.alert('Failure', 'Form fields may not be submitted with invalid values');",
+                    "                    break;",
+                    "                case Ext.form.action.Action.CONNECT_FAILURE:",
+                    "                    Ext.Msg.alert('Failure', 'Ajax communication failed');",
+                    "                    break;",
+                    "                case Ext.form.action.Action.SERVER_INVALID:",
+                    "                    Ext.Msg.alert('Failure', action.result.msg);",
+                    "            }",
+                    "        }",
+                    "    });",
+                    "}",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "67f6061e-76a9-4a41-9850-ee3fd3da2ed8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "usersgrid button#new",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onAddNewUserClick",
+                "implHandler": [
+                    "var win    = this.getUserForm(),",
+                    "    record = Ext.create('Camminus.model.User');",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('userform');",
+                    "}",
+                    "",
+                    "this.adding = true;",
+                    "",
+                    "win.down('form').loadRecord(record);",
+                    "",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "0542a307-58c3-47a0-b668-9087a8ba4924"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userform",
+                "designer|targetType": "users.Form",
+                "fn": "onUsersFormShow",
+                "implHandler": [
+                    "console.log(this.adding);",
+                    "",
+                    "if (this.adding) {",
+                    "    this.adding = undefined;",
+                    "",
+                    "    component.setTitle('Criar novo usuário');",
+                    "",
+                    "    component.down('#userButton').setText('Salvar');",
+                    "    component.down('#password').setDisabled(false);",
+                    "    component.down('#passwordcheck').setDisabled(false);",
+                    "}",
+                    ""
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "designerId": "7628191c-a83d-4362-ba12-20cc294dbc33"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "headertoolbar button#logoutButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onLogoutButtonClick",
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url: '/login/logout',",
+                    "    method: 'POST',",
+                    "    success:function(response){",
+                    "",
+                    "        if(response.responseText){",
+                    "            var redirect = \"http://\"+window.document.location.host;",
+                    "            window.location = redirect;",
+                    "        }",
+                    "",
+                    "    },",
+                    "",
+                    "    failure: function(response) {",
+                    "        Ext.Msg.show({",
+                    "            title:' Erro!',",
+                    "            msg: response.responseText,",
+                    "            icon: Ext.Msg.ERROR,",
+                    "            buttons: Ext.Msg.OK",
+                    "        });",
+                    "",
+                    "    }",
+                    "",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "d52b9077-f47c-4497-9dd2-de9fe29ddea6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "usersgrid button#refresh",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onUserRefreshButtonClick",
+                "implHandler": [
+                    "this.getUsersStore().load();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "bfd9c166-a534-4b9b-be59-d4bf99b7ed87"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "usersgrid button#edit",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onUserEditButtonClick",
+                "implHandler": [
+                    "var win = this.getUserForm(),",
+                    "    grid = button.up('usersgrid'),",
+                    "    record = grid.getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('userform');",
+                    "}",
+                    "",
+                    "if (record[0].get('profile_image')) {",
+                    "",
+                    "    var img = win.down('image');",
+                    "    img.setSrc('resources/profileImages/' + record[0].get('profile_image'));",
+                    "}",
+                    "",
+                    "win.setTitle(record[0].get('name'));",
+                    "win.down('form').loadRecord(record[0]);",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "38a14b73-3844-47cf-8fed-c205c6eae94e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#profileimage",
+                "designer|targetType": "Ext.form.field.File",
+                "fn": "onFilefieldChange",
+                "implHandler": [
+                    "var file = filefield.fileInputEl.dom.files[0],",
+                    "    picture = this.getUserPicture();",
+                    "",
+                    "",
+                    "if (typeof FileReader !== \"undefined\" && (/image/i).test(file.type)) {",
+                    "",
+                    "    var reader = new FileReader();",
+                    "",
+                    "    reader.onload = function(e){",
+                    "        picture.setSrc(e.target.result);",
+                    "    };",
+                    "",
+                    "    reader.readAsDataURL(file);",
+                    "",
+                    "}",
+                    "    else if (!(/image/i).test(file.type)){",
+                    "",
+                    "        Ext.Msg.alert('Warning', 'You can only upload image files!');",
+                    "        filefield.reset();",
+                    "",
+                    "    }",
+                    ""
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "designerId": "97736b91-1c21-4f04-b500-abf31b160a3e"
+        }
+    ]
+}

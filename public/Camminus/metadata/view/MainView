@@ -1,0 +1,82 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|padding": null,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "layout": "border",
+        "margin": null,
+        "padding": null
+    },
+    "designerId": "ac6d2e9f-c3a8-4637-93ca-ed505d6db31e",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "west",
+                "layout|split": true,
+                "layout|splitterResize": false
+            },
+            "name": "menu.accordion",
+            "designerId": "2264e992-ef30-4392-a8de-139359674514",
+            "masterInstanceId": "1e258cb2-9f7d-4ec2-b9d7-e1a150e6dd92"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center"
+            },
+            "name": "mainpanel",
+            "designerId": "1562257d-40a4-4b3f-896e-5d2e18a267dc",
+            "masterInstanceId": "8df21c85-a90e-46c6-b7b6-3b834dbb3c76"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "north",
+                "layout|split": true,
+                "layout|splitterResize": false
+            },
+            "name": "headertoolbar",
+            "designerId": "03f12d58-4852-4ec3-b17f-8dbac9bf4d12",
+            "masterInstanceId": "8dbe77f3-b224-411f-9613-fdb3bc8c7daa"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|collapseMode": null,
+                "layout|region": "south",
+                "layout|split": true,
+                "layout|splitterResize": false
+            },
+            "name": "footertoolbar",
+            "designerId": "abebd463-1b12-4959-923c-fca402096048",
+            "masterInstanceId": "0744d852-2d4c-4426-a190-ef68850e4a77"
+        }
+    ]
+}

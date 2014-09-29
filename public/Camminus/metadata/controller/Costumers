@@ -1,0 +1,279 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Costumers",
+        "models": [
+            "Costumer"
+        ],
+        "stores": [
+            "Costumers"
+        ],
+        "views": [
+            "costumers.Grid",
+            "costumers.Form"
+        ]
+    },
+    "designerId": "3ba8f76f-ffa8-4d34-93dc-61199072437d",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "costumersForm",
+                "selector": "costumersform"
+            },
+            "name": "costumersForm",
+            "designerId": "dfc58a2d-8034-4ea0-b02f-8545214476a2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "costumersgrid",
+                "designer|targetType": "costumers.Grid",
+                "fn": "onCostumersGridpanelRender",
+                "implHandler": [
+                    "this.getCostumersStore().load();",
+                    ""
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onCostumersGridpanelRender",
+            "designerId": "3e5bf051-512a-450f-a38b-748d665718ba"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "costumersgrid button#new",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onAddNewCostumerClick",
+                "implHandler": [
+                    "var win    = this.getCostumersForm();",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('costumersform');",
+                    "}",
+                    "",
+                    "win.adding = true;",
+                    "",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onAddNewCostumerClick",
+            "designerId": "c8002ef6-20eb-48a5-9425-7347ba14b54e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#costumerButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onCustumerButtonClick",
+                "implHandler": [
+                    "var win    = button.up('window'),",
+                    "    formPanel   = win.down('form'),",
+                    "    values = formPanel.getValues(),",
+                    "    store  = this.getCostumersStore(),",
+                    "    grid   = this.getCostumersGrid();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "if(formPanel.getForm().isValid()) {",
+                    "",
+                    "",
+                    "",
+                    "    //Save",
+                    "    if(button.text === 'Salvar'){",
+                    "        store.add(values);",
+                    "",
+                    "        if (grid){",
+                    "             grid.getSelectionModel().select(store.getNewRecords());",
+                    "        }",
+                    "",
+                    "    }",
+                    "    //Update",
+                    "    else{",
+                    "        formPanel.updateRecord();",
+                    "    }",
+                    "",
+                    "    store.sync();",
+                    "",
+                    "    win.close();",
+                    "",
+                    "",
+                    "}",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onCustumerButtonClick",
+            "designerId": "f2a8b98b-51c4-4f7d-bffe-f57a93b9eeaf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#refreshCostumer",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onRefreshButtonClick",
+                "implHandler": [
+                    "this.getCostumersStore().load();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onRefreshButtonClick",
+            "designerId": "fb198b00-f1a3-4796-9027-46029634beee"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#deleteCostumer",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onDeleteButtonClick",
+                "implHandler": [
+                    "var grid = this.getCostumersGrid(),",
+                    "    record = grid.getSelectionModel().getSelection(),",
+                    "    store = grid.getStore();",
+                    "",
+                    "",
+                    "Ext.Msg.show({",
+                    "",
+                    "    title: translations.msg_title_delete,",
+                    "    msg: translations.msg_delete,",
+                    "    buttons: Ext.Msg.YESNO,",
+                    "    icon: Ext.Msg.QUESTION,",
+                    "    fn: function (buttonId){",
+                    "        console.log(buttonId);",
+                    "        if (buttonId == 'yes'){",
+                    "            store.remove(record);",
+                    "            store.sync();",
+                    "        }",
+                    "    }",
+                    "",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onDeleteButtonClick",
+            "designerId": "56a623c7-5420-44a5-ac23-347a3ede8393"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#editCostumer",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onEditButtonClick",
+                "implHandler": [
+                    "var win = this.getCostumersForm(),",
+                    "    grid = button.up('costumersgrid'),",
+                    "    record = grid.getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('costumersform');",
+                    "}",
+                    "",
+                    "",
+                    "win.setTitle(record[0].get('name'));",
+                    "win.down('form').loadRecord(record[0]);",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onEditButtonClick",
+            "designerId": "7331ec3f-e70d-441e-90af-9b438723d168"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "costumersgrid",
+                "designer|targetType": "costumers.Grid",
+                "fn": "onCostumersGridpanelItemDblClick",
+                "implHandler": [
+                    "var win = this.getCostumersForm();",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('costumersform');",
+                    "}",
+                    "",
+                    "win.setTitle(record.get('name'));",
+                    "win.down('form').loadRecord(record);",
+                    "win.show();"
+                ],
+                "name": "itemdblclick",
+                "scope": "me"
+            },
+            "name": "onCostumersGridpanelItemDblClick",
+            "designerId": "bb5adb5b-e2ca-4db2-ad38-10796cbb1029"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "costumersGrid",
+                "selector": "#costumersGrid"
+            },
+            "name": "costumersGrid",
+            "designerId": "4ca3ec06-0ba5-4ca1-988d-f8a5f84a21b9"
+        }
+    ]
+}

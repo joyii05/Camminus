@@ -1,0 +1,35 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {\"name\":\"Nova\"},",
+            "    {\"name\":\"Garantia\"}",
+            "]",
+            "        "
+        ],
+        "designer|userClassName": "cases.Tipo",
+        "storeId": "cases.Tipo"
+    },
+    "designerId": "6b5e0059-07d7-47f7-9c38-6bbbe67625da",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField47",
+            "designerId": "a005c9a5-a8d0-4bd4-b4f8-ffe30ac6a098"
+        }
+    ]
+}

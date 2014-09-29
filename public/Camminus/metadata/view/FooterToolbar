@@ -1,0 +1,16 @@
+{
+    "type": "Ext.toolbar.Toolbar",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "footertoolbar",
+        "designer|userClassName": "FooterToolbar",
+        "height": 25,
+        "ui": "footer",
+        "width": 400
+    },
+    "designerId": "0744d852-2d4c-4426-a190-ef68850e4a77"
+}

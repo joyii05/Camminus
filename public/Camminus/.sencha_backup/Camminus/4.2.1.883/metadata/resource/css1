@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css1",
+        "url": "ext/src/ux/statusbar/css/statusbar.css"
+    },
+    "designerId": "3628c177-62a7-4566-a9a7-105a7405f64e"
+}

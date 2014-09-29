@@ -1,0 +1,9 @@
+{
+   "name": "Camminus",
+   "requires": [],
+   "id": "2d0ed298-66ee-4c4d-9715-78e3d450bd5f",
+   "resources": [
+      "resources/css/app.css",
+      "ext/src/ux/statusbar/css/statusbar.css"
+   ]
+}

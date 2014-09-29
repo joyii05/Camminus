@@ -1,0 +1,744 @@
+[2013-09-01 00:00:12] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome' in 'order clause'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select * from `...')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/controllers/UserController.php(18): Illuminate\Database\Eloquent\Builder->get()
+#9 [internal function]: UserController->index()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome' in 'order clause' (SQL: select * from `users` order by `nome` ASC limit 30 offset 0) (Bindings: array (
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/controllers/UserController.php(18): Illuminate\Database\Eloquent\Builder->get()
+#8 [internal function]: UserController->index()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2013-09-01 00:01:15] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome' in 'order clause'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select * from `...')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/controllers/UserController.php(18): Illuminate\Database\Eloquent\Builder->get()
+#9 [internal function]: UserController->index()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome' in 'order clause' (SQL: select * from `users` order by `nome` ASC limit 30 offset 0) (Bindings: array (
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/controllers/UserController.php(18): Illuminate\Database\Eloquent\Builder->get()
+#8 [internal function]: UserController->index()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2013-09-01 03:28:52] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-09-01 03:29:34] log.ERROR: exception 'BadMethodCallException' with message 'Call to undefined method Illuminate\Database\Query\Builder::getAll()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:1606
+Stack trace:
+#0 [internal function]: Illuminate\Database\Query\Builder->__call('getAll', Array)
+#1 [internal function]: Illuminate\Database\Query\Builder->getAll()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(729): call_user_func_array(Array, Array)
+#3 [internal function]: Illuminate\Database\Eloquent\Builder->__call('getAll', Array)
+#4 [internal function]: Illuminate\Database\Eloquent\Builder->getAll()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2543): call_user_func_array(Array, Array)
+#6 [internal function]: Illuminate\Database\Eloquent\Model->__call('getAll', Array)
+#7 [internal function]: User->getAll()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2557): call_user_func_array(Array, Array)
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(21): Illuminate\Database\Eloquent\Model::__callStatic('getAll', Array)
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(21): User::getAll()
+#11 [internal function]: {closure}()
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2013-09-01 03:39:25] log.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:22
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(22): Illuminate\Exception\Handler->handleError(8, 'Trying to get p...', '/Users/geneslun...', 22, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 03:39:58] log.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:23
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(23): Illuminate\Exception\Handler->handleError(8, 'Trying to get p...', '/Users/geneslun...', 23, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 03:40:14] log.ERROR: exception 'ErrorException' with message 'Undefined property: Illuminate\Database\Eloquent\Relations\BelongsTo::$name' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:23
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(23): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', '/Users/geneslun...', 23, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 03:43:00] log.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:23
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(23): Illuminate\Exception\Handler->handleError(8, 'Trying to get p...', '/Users/geneslun...', 23, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 03:48:19] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}', expecting ',' or ';'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/models/User.php:64
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-09-01 04:10:20] log.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:26
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(26): Illuminate\Exception\Handler->handleError(8, 'Trying to get p...', '/Users/geneslun...', 26, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 04:10:36] log.ERROR: exception 'ErrorException' with message 'Undefined property: Illuminate\Database\Eloquent\Relations\BelongsTo::$name' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:26
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(26): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', '/Users/geneslun...', 26, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 04:12:10] log.ERROR: exception 'BadMethodCallException' with message 'Call to undefined method Illuminate\Database\Query\Builder::belogsToMany()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:1606
+Stack trace:
+#0 [internal function]: Illuminate\Database\Query\Builder->__call('belogsToMany', Array)
+#1 [internal function]: Illuminate\Database\Query\Builder->belogsToMany('User')
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(729): call_user_func_array(Array, Array)
+#3 [internal function]: Illuminate\Database\Eloquent\Builder->__call('belogsToMany', Array)
+#4 [internal function]: Illuminate\Database\Eloquent\Builder->belogsToMany('User')
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2543): call_user_func_array(Array, Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/models/UserRole.php(10): Illuminate\Database\Eloquent\Model->__call('belogsToMany', Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/models/UserRole.php(10): UserRole->belogsToMany('User')
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): UserRole->users()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('users')
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(25): Illuminate\Database\Eloquent\Model->__get('users')
+#11 [internal function]: {closure}()
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2013-09-01 04:13:14] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_roles.user_id' in 'where clause'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select * from `...')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): Illuminate\Database\Eloquent\Builder->first()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\HasOne->getResults()
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('role')
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(26): Illuminate\Database\Eloquent\Model->__get('role')
+#13 [internal function]: {closure}()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_roles.user_id' in 'where clause' (SQL: select * from `user_roles` where `user_roles`.`user_id` = ? limit 1) (Bindings: array (
+  0 => '1',
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): Illuminate\Database\Eloquent\Builder->first()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\HasOne->getResults()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('role')
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(26): Illuminate\Database\Eloquent\Model->__get('role')
+#12 [internal function]: {closure}()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2013-09-01 04:13:18] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_roles.user_id' in 'where clause'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select * from `...')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): Illuminate\Database\Eloquent\Builder->first()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\HasOne->getResults()
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('role')
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(26): Illuminate\Database\Eloquent\Model->__get('role')
+#13 [internal function]: {closure}()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_roles.user_id' in 'where clause' (SQL: select * from `user_roles` where `user_roles`.`user_id` = ? limit 1) (Bindings: array (
+  0 => '1',
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): Illuminate\Database\Eloquent\Builder->first()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\HasOne->getResults()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('role')
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(26): Illuminate\Database\Eloquent\Model->__get('role')
+#12 [internal function]: {closure}()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2013-09-01 04:15:24] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_roles.user_id' in 'where clause'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select * from `...')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): Illuminate\Database\Eloquent\Builder->first()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\HasOne->getResults()
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('role')
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(26): Illuminate\Database\Eloquent\Model->__get('role')
+#13 [internal function]: {closure}()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_roles.user_id' in 'where clause' (SQL: select * from `user_roles` where `user_roles`.`user_id` = ? limit 1) (Bindings: array (
+  0 => '1',
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): Illuminate\Database\Eloquent\Builder->first()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\HasOne->getResults()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('role')
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(26): Illuminate\Database\Eloquent\Model->__get('role')
+#12 [internal function]: {closure}()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2013-09-01 04:32:40] log.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:27
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Exception\Handler->handleError(8, 'Trying to get p...', '/Users/geneslun...', 27, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 04:35:08] log.ERROR: exception 'BadMethodCallException' with message 'Call to undefined method Illuminate\Database\Query\Builder::belogsTo()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:1606
+Stack trace:
+#0 [internal function]: Illuminate\Database\Query\Builder->__call('belogsTo', Array)
+#1 [internal function]: Illuminate\Database\Query\Builder->belogsTo('User')
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(729): call_user_func_array(Array, Array)
+#3 [internal function]: Illuminate\Database\Eloquent\Builder->__call('belogsTo', Array)
+#4 [internal function]: Illuminate\Database\Eloquent\Builder->belogsTo('User')
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2543): call_user_func_array(Array, Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/models/UserRole.php(10): Illuminate\Database\Eloquent\Model->__call('belogsTo', Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/models/UserRole.php(10): UserRole->belogsTo('User')
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): UserRole->users()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('users')
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(25): Illuminate\Database\Eloquent\Model->__get('users')
+#11 [internal function]: {closure}()
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2013-09-01 04:35:19] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_roles.user_id' in 'where clause'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select * from `...')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): Illuminate\Database\Eloquent\Builder->first()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\HasOne->getResults()
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('role')
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Database\Eloquent\Model->__get('role')
+#13 [internal function]: {closure}()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_roles.user_id' in 'where clause' (SQL: select * from `user_roles` where `user_roles`.`user_id` = ? limit 1) (Bindings: array (
+  0 => '2',
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): Illuminate\Database\Eloquent\Builder->first()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\HasOne->getResults()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('role')
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Database\Eloquent\Model->__get('role')
+#12 [internal function]: {closure}()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2013-09-01 04:35:47] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manu.user_user_role' doesn't exist' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select `users`....')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select `users`....', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select `users`....', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select `users`....', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php(103): Illuminate\Database\Eloquent\Builder->getModels()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php(74): Illuminate\Database\Eloquent\Relations\BelongsToMany->get()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\BelongsToMany->getResults()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('users')
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(25): Illuminate\Database\Eloquent\Model->__get('users')
+#12 [internal function]: {closure}()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manu.user_user_role' doesn't exist (SQL: select `users`.*, `user_user_role`.`user_role_id` as `pivot_user_role_id`, `user_user_role`.`user_id` as `pivot_user_id` from `users` inner join `user_user_role` on `users`.`id` = `user_user_role`.`user_id` where `user_user_role`.`user_role_id` = ?) (Bindings: array (
+  0 => '3',
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select `users`....', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select `users`....', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select `users`....', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php(103): Illuminate\Database\Eloquent\Builder->getModels()
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php(74): Illuminate\Database\Eloquent\Relations\BelongsToMany->get()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\BelongsToMany->getResults()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('users')
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(25): Illuminate\Database\Eloquent\Model->__get('users')
+#11 [internal function]: {closure}()
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2013-09-01 04:36:14] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_roles.user_id' in 'where clause'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select * from `...')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): Illuminate\Database\Eloquent\Builder->first()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\HasOne->getResults()
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('role')
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Database\Eloquent\Model->__get('role')
+#13 [internal function]: {closure}()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_roles.user_id' in 'where clause' (SQL: select * from `user_roles` where `user_roles`.`user_id` = ? limit 1) (Bindings: array (
+  0 => '2',
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): Illuminate\Database\Eloquent\Builder->first()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\HasOne->getResults()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('role')
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Database\Eloquent\Model->__get('role')
+#12 [internal function]: {closure}()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2013-09-01 04:40:34] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:27
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-09-01 05:04:04] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manu.user_contract_type' doesn't exist' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select * from `...')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsTo.php(48): Illuminate\Database\Eloquent\Builder->first()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\BelongsTo->getResults()
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('contractType')
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Database\Eloquent\Model->__get('contractType')
+#13 [internal function]: {closure}()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manu.user_contract_type' doesn't exist (SQL: select * from `user_contract_type` where `user_contract_type`.`id` = ? limit 1) (Bindings: array (
+  0 => '3',
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsTo.php(48): Illuminate\Database\Eloquent\Builder->first()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\BelongsTo->getResults()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('contractType')
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Database\Eloquent\Model->__get('contractType')
+#12 [internal function]: {closure}()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2013-09-01 05:04:08] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manu.user_contract_type' doesn't exist' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select * from `...')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsTo.php(48): Illuminate\Database\Eloquent\Builder->first()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\BelongsTo->getResults()
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('contractType')
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Database\Eloquent\Model->__get('contractType')
+#13 [internal function]: {closure}()
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manu.user_contract_type' doesn't exist (SQL: select * from `user_contract_type` where `user_contract_type`.`id` = ? limit 1) (Bindings: array (
+  0 => '3',
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(397): Illuminate\Database\Query\Builder->get(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(112): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(88): Illuminate\Database\Eloquent\Builder->get(Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsTo.php(48): Illuminate\Database\Eloquent\Builder->first()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1963): Illuminate\Database\Eloquent\Relations\BelongsTo->getResults()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2443): Illuminate\Database\Eloquent\Model->getAttribute('contractType')
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Database\Eloquent\Model->__get('contractType')
+#12 [internal function]: {closure}()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2013-09-01 05:13:05] log.ERROR: exception 'ErrorException' with message 'Undefined property: Illuminate\Database\Eloquent\Collection::$UserRole' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:27
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', '/Users/geneslun...', 27, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 05:13:09] log.ERROR: exception 'ErrorException' with message 'Undefined property: Illuminate\Database\Eloquent\Collection::$UserRole' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:27
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', '/Users/geneslun...', 27, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 05:13:27] log.ERROR: exception 'ErrorException' with message 'Undefined property: Illuminate\Database\Eloquent\Collection::$userrole' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:27
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', '/Users/geneslun...', 27, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 05:14:35] log.ERROR: exception 'ErrorException' with message 'Undefined property: Illuminate\Database\Eloquent\Collection::$role' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:27
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(27): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', '/Users/geneslun...', 27, Array)
+#1 [internal function]: {closure}()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#8 {main} [] []
+[2013-09-01 05:18:03] log.ERROR: exception 'BadMethodCallException' with message 'Call to undefined method Illuminate\Database\Query\Builder::roles()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:1606
+Stack trace:
+#0 [internal function]: Illuminate\Database\Query\Builder->__call('roles', Array)
+#1 [internal function]: Illuminate\Database\Query\Builder->roles()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(729): call_user_func_array(Array, Array)
+#3 [internal function]: Illuminate\Database\Eloquent\Builder->__call('roles', Array)
+#4 [internal function]: Illuminate\Database\Eloquent\Builder->roles()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2543): call_user_func_array(Array, Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(482): Illuminate\Database\Eloquent\Model->__call('roles', Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(482): User->roles()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(451): Illuminate\Database\Eloquent\Builder->getRelation('roles')
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(431): Illuminate\Database\Eloquent\Builder->loadRelation(Array, 'roles', Object(Closure))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(119): Illuminate\Database\Eloquent\Builder->eagerLoadRelations(Array)
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/controllers/UserController.php(19): Illuminate\Database\Eloquent\Builder->get()
+#12 [internal function]: UserController->index()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#16 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#21 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#22 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main} [] []
+[2013-09-01 05:18:22] log.ERROR: exception 'BadMethodCallException' with message 'Call to undefined method Illuminate\Database\Query\Builder::roles()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:1606
+Stack trace:
+#0 [internal function]: Illuminate\Database\Query\Builder->__call('roles', Array)
+#1 [internal function]: Illuminate\Database\Query\Builder->roles()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(729): call_user_func_array(Array, Array)
+#3 [internal function]: Illuminate\Database\Eloquent\Builder->__call('roles', Array)
+#4 [internal function]: Illuminate\Database\Eloquent\Builder->roles()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2543): call_user_func_array(Array, Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(482): Illuminate\Database\Eloquent\Model->__call('roles', Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(482): User->roles()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(451): Illuminate\Database\Eloquent\Builder->getRelation('roles')
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(431): Illuminate\Database\Eloquent\Builder->loadRelation(Array, 'roles', Object(Closure))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(119): Illuminate\Database\Eloquent\Builder->eagerLoadRelations(Array)
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/controllers/UserController.php(19): Illuminate\Database\Eloquent\Builder->get()
+#12 [internal function]: UserController->index()
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#14 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#15 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#16 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#17 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#18 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#19 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#21 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#22 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main} [] []
+[2013-09-01 06:16:27] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-09-01 06:17:09] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []

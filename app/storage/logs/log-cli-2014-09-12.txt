@@ -1,0 +1,4 @@
+[2014-09-12 15:29:47] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '->' (T_OBJECT_OPERATOR)' in /var/www/camminus/app/filters.php:44
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

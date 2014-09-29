@@ -1,0 +1,33 @@
+[2013-08-28 00:54:05] log.ERROR: exception 'ReflectionException' with message 'Class LoginController does not exist' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Inspector.php:29
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Inspector.php(29): ReflectionClass->__construct('LoginController')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(247): Illuminate\Routing\Controllers\Inspector->getRoutable('LoginController', 'login')
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(180): Illuminate\Routing\Router->controller('login', 'LoginController')
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(21): Illuminate\Support\Facades\Facade::__callStatic('controller', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(21): Illuminate\Support\Facades\Route::controller('login', 'LoginController')
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/start.php(253): require('/Users/geneslun...')
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/bootstrap/start.php(61): require('/Users/geneslun...')
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/artisan(30): require_once('/Users/geneslun...')
+#8 {main} [] []
+[2013-08-28 01:15:48] log.ERROR: exception 'ReflectionException' with message 'Class LoginController does not exist' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Inspector.php:29
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Inspector.php(29): ReflectionClass->__construct('LoginController')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(247): Illuminate\Routing\Controllers\Inspector->getRoutable('LoginController', 'login')
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(180): Illuminate\Routing\Router->controller('login', 'LoginController')
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(21): Illuminate\Support\Facades\Facade::__callStatic('controller', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(21): Illuminate\Support\Facades\Route::controller('login', 'LoginController')
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/start.php(253): require('/Users/geneslun...')
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/bootstrap/start.php(61): require('/Users/geneslun...')
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/artisan(30): require_once('/Users/geneslun...')
+#8 {main} [] []
+[2013-08-28 01:16:17] log.ERROR: exception 'ReflectionException' with message 'Class LoginController does not exist' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Inspector.php:29
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Inspector.php(29): ReflectionClass->__construct('LoginController')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(247): Illuminate\Routing\Controllers\Inspector->getRoutable('LoginController', 'login')
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(180): Illuminate\Routing\Router->controller('login', 'LoginController')
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(21): Illuminate\Support\Facades\Facade::__callStatic('controller', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(21): Illuminate\Support\Facades\Route::controller('login', 'LoginController')
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/start.php(253): require('/Users/geneslun...')
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/bootstrap/start.php(61): require('/Users/geneslun...')
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/artisan(30): require_once('/Users/geneslun...')
+#8 {main} [] []

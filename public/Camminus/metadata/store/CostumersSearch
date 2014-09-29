@@ -1,0 +1,36 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "CostumersSearch",
+        "leadingBufferZone": 300,
+        "model": "Costumer",
+        "pageSize": 30,
+        "remoteSort": true,
+        "storeId": "CostumersSearch"
+    },
+    "designerId": "5367676d-3f7c-42fa-b0ca-b6b1918635cb",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "nameSorter",
+                "direction": null,
+                "property": "name",
+                "root": null
+            },
+            "name": "MySorter2",
+            "designerId": "79792e59-95d3-4509-b9d0-631fcb41ca47"
+        }
+    ]
+}

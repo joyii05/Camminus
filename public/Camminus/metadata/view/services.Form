@@ -1,0 +1,304 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "servicesform",
+        "designer|userClassName": "services.Form",
+        "height": 239,
+        "layout": "fit",
+        "title": "Editar Serviço",
+        "width": 433
+    },
+    "designerId": "5dc5b433-04d2-42eb-94c3-d94dd2069e8f",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "designer|displayName": "Serviço",
+                "height": 250,
+                "layout": "auto",
+                "title": "",
+                "width": 386
+            },
+            "name": "MyForm4",
+            "designerId": "3afeeb5c-857e-4ce2-92d3-0132236571bd",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox"
+                    },
+                    "name": "MyContainer",
+                    "designerId": "98a191bb-c66e-4c4b-bbb2-eab13815002c",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "allowOnlyWhitespace": false,
+                                "fieldLabel": "Nome",
+                                "labelAlign": "top",
+                                "layout|flex": 10,
+                                "name": "name",
+                                "width": null
+                            },
+                            "name": "MyTextField29",
+                            "designerId": "1702ac52-4dbe-44e0-9254-5df86d45f733",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                                        ]
+                                    },
+                                    "name": "tpl15",
+                                    "designerId": "d965248c-a9d5-499c-ab9d-f55a0bfde86d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "allowOnlyWhitespace": false,
+                                "fieldLabel": "Preço",
+                                "labelAlign": "top",
+                                "layout|flex": 3,
+                                "margin": "0 0 0 10",
+                                "mask": "R$ #9.999.990,00",
+                                "money": true,
+                                "name": "preco",
+                                "width": null
+                            },
+                            "name": "MyTextField30",
+                            "configAlternates": {
+                                "money": "boolean"
+                            },
+                            "designerId": "87fc8152-7507-43fd-9000-a084842b7004",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "mask",
+                                    "type": "string"
+                                },
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "money",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                                        ]
+                                    },
+                                    "name": "tpl16",
+                                    "designerId": "54fb85af-9b70-494b-9517-323e1e0dff6e"
+                                },
+                                {
+                                    "type": "processcfgfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "config"
+                                        ],
+                                        "fn": "processPreco",
+                                        "implHandler": [
+                                            "config.plugins = [\"textmask\"];",
+                                            "",
+                                            "return config;"
+                                        ]
+                                    },
+                                    "name": "processPreco",
+                                    "designerId": "4a8dabea-eb35-40e0-ad72-cea0a2571725"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Descrição",
+                        "labelAlign": "top",
+                        "margin": "5 0 0 0 ",
+                        "name": "description",
+                        "width": 403
+                    },
+                    "name": "MyTextArea3",
+                    "designerId": "bf0ebdd9-c311-4d48-9a77-d038e9f4b0f2"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|padding": null,
+                        "designer|displayName": "Toolbar",
+                        "dock": "bottom",
+                        "ui": "footer"
+                    },
+                    "name": "MyToolbar3",
+                    "designerId": "5b1de760-f26a-4dda-80c1-8a3df76f545c",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "name": "MyFill4",
+                            "designerId": "2d9cc950-f82c-47ab-8548-6f34ae6067f6"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "action": "reset",
+                                "id": null,
+                                "itemId": "servicesCancel",
+                                "layout|flex": null,
+                                "text": "Cancelar"
+                            },
+                            "name": "MyButton9",
+                            "designerId": "0c5b9788-dd9f-4e74-8f94-379d20502519",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "action",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "this.up('window').close();",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "b9a7fbd1-42d8-4129-a206-9882864bdea0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": null,
+                                "itemId": "servicesButton",
+                                "layout|flex": null,
+                                "text": "Atualizar"
+                            },
+                            "name": "MyButton10",
+                            "designerId": "46fc968b-7fb7-4969-9f42-0c2fc47c652f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowShow",
+                "implHandler": [
+                    "",
+                    "if (component.adding) {",
+                    "    component.adding = undefined;",
+                    "",
+                    "    component.setTitle('Criar novo serviço');",
+                    "",
+                    "    component.down('#servicesButton').setText('Salvar');",
+                    "",
+                    "}"
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "name": "onWindowShow",
+            "designerId": "e0dbd670-5afb-421f-8868-cf4a8917a0a1"
+        }
+    ]
+}

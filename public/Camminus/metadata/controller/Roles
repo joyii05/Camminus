@@ -1,0 +1,108 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Roles",
+        "stores": [
+            "Roles"
+        ],
+        "views": [
+            "roles.Grid"
+        ]
+    },
+    "designerId": "f995bd57-d30a-4b34-9c24-d1627beab457",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rolesGrid",
+                "selector": "rolesgrid",
+                "xtype": null
+            },
+            "name": "rolesGrid",
+            "designerId": "40ab9671-12ab-4988-83d9-7ab52010c6b1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rolesgrid",
+                "designer|targetType": "roles.Grid",
+                "fn": "onRolesGridpanelRender",
+                "implHandler": [
+                    "this.getRolesStore().load();",
+                    ""
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onRolesGridpanelRender",
+            "designerId": "da3d5851-af26-417a-8d48-d115e68f8e40"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#deleteRole",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onDeleteButtonClick",
+                "implHandler": [
+                    "var grid = this.getRolesGrid(),",
+                    "    record = grid.getSelectionModel().getSelection(),",
+                    "    store = grid.getStore();",
+                    "",
+                    "",
+                    "if (record[0].data.name == \"Admin\"){",
+                    "    Ext.Msg.show({",
+                    "        title: translations.msg_title_warning,",
+                    "        msg: \"Não é possível apagar o grupo 'Admin'.\",",
+                    "        buttons: Ext.Msg.OK,",
+                    "        icon: Ext.Msg.WARNING",
+                    "    });",
+                    "}",
+                    "",
+                    "",
+                    "// Ext.Msg.show({",
+                    "",
+                    "//     title: translations.msg_title_delete,",
+                    "//     msg: translations.msg_delete,",
+                    "//     buttons: Ext.Msg.YESNO,",
+                    "//     icon: Ext.Msg.QUESTION,",
+                    "//     fn: function (buttonId){",
+                    "//         console.log(buttonId);",
+                    "//         if (buttonId == 'yes'){",
+                    "//             store.remove(record);",
+                    "//             store.sync();",
+                    "//         }",
+                    "//     }",
+                    "",
+                    "// });",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onDeleteButtonClick",
+            "designerId": "75a37934-5838-435e-b077-467362bb59f4"
+        }
+    ]
+}

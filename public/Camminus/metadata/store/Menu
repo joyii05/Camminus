@@ -1,0 +1,49 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defaultSortDirection": null,
+        "designer|userAlias": "menu",
+        "designer|userClassName": "Menu",
+        "model": "menu.Root",
+        "sortRoot": null,
+        "storeId": "Menu"
+    },
+    "designerId": "5b75156b-1b83-4278-b809-48646e942386",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "MenuRestProxy",
+                "url": "/menus"
+            },
+            "name": "MyRestProxy6",
+            "designerId": "6070fbd5-2e8e-4954-9610-650262bb6f32",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "MenuJsonReader",
+                        "root": "items"
+                    },
+                    "name": "MyJsonReader6",
+                    "designerId": "609022eb-8be5-4949-95e1-0767cd9ee12f"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,588 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Cases",
+        "models": [
+            "Case"
+        ],
+        "stores": [
+            "cases.Prioridade",
+            "cases.Status",
+            "Cases",
+            "Costumers",
+            "CostumersSearch",
+            "cases.Services"
+        ],
+        "views": [
+            "cases.Form",
+            "cases.Grid"
+        ]
+    },
+    "designerId": "f835792f-eadd-4e15-beb2-280aa517f7ae",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "casesgrid",
+                "designer|targetType": "cases.Grid",
+                "fn": "onCasesGridpanelRender",
+                "implHandler": [
+                    "this.getCasesStore().load();",
+                    ""
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onCasesGridpanelRender",
+            "designerId": "88cd824d-e28b-4060-b8c2-eb2c1ae96b46"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "costumersForm",
+                "selector": "costumersform"
+            },
+            "name": "costumersForm",
+            "designerId": "6490731a-209f-4109-a76f-f3d736a73e99"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#addCase",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onAddCaseButtonClick",
+                "implHandler": [
+                    "var win    = this.getCasesForm();",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('casesform');",
+                    "}",
+                    "",
+                    "win.adding = true;",
+                    "",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onAddCaseButtonClick",
+            "designerId": "57c69de4-38a2-479b-8c5b-e41054f5fcb6"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.getCostumersStore().on({",
+                    "    write: this.finishedLoading,",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "name": "init",
+            "designerId": "306fc0bf-a75f-41a4-90a5-22873ef42c03"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store, operation, eOpts"
+                ],
+                "fn": "finishedLoading",
+                "implHandler": [
+                    "var cliente = this.getBuscaCliente(),",
+                    "    record  = operation.getRecords()[0],",
+                    "    str     = this.getCostumersSearchStore();",
+                    "",
+                    "// str.load({",
+                    "//   params: {query: op}",
+                    "// });",
+                    "",
+                    "if (cliente){",
+                    "  cliente.setValue(record);",
+                    "}",
+                    "",
+                    "console.log(record);",
+                    ""
+                ]
+            },
+            "name": "finishedLoading",
+            "designerId": "b96e6c6b-873b-4a17-9949-a5280cb2ef49"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "casesGrid",
+                "selector": "casesgrid"
+            },
+            "name": "casesGrid",
+            "designerId": "1c961eca-f7b4-40cc-a64c-be50f90ef22f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#casesButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onCasesButtonClick",
+                "implHandler": [
+                    "var win        = button.up('window'),",
+                    "    formPanel  = win.down('form'),",
+                    "    values     = formPanel.getValues(),",
+                    "    store      = this.getCasesStore(),",
+                    "    storeCS    = Ext.getStore('cases.Services'),",
+                    "    grid       = this.getCasesGrid(),",
+                    "    allRecords = storeCS.snapshot || storeCS.data,",
+                    "    allItems   = allRecords.items,",
+                    "    holder     = [];",
+                    "",
+                    "//Gets Services",
+                    "allItems.forEach(function(entry, index) {",
+                    "    holder.push(entry.data.id);",
+                    "});",
+                    "",
+                    "// Adds Services Ids",
+                    "values.services = holder;",
+                    "",
+                    "",
+                    "// Saves",
+                    "if(formPanel.getForm().isValid()) {",
+                    "",
+                    "    //Adds to the store",
+                    "    if(button.text === 'Salvar'){",
+                    "        store.add(values);",
+                    "        if (grid){",
+                    "            grid.getSelectionModel().select(store.getNewRecords());",
+                    "        }",
+                    "    }",
+                    "",
+                    "    // Syncs with backend",
+                    "    store.sync({",
+                    "",
+                    "        success: function(batch) {",
+                    "",
+                    "            var retorno = Ext.JSON.decode(batch.operations[0].response.responseText);",
+                    "",
+                    "            Camminus.util.Alert.msg('Sucesso', 'Ocorrência de número \"' + retorno.data.case_number + '\" criada com sucesso.');",
+                    "            storeCS.removeAll();",
+                    "            win.getLayout().setActiveItem(2);",
+                    "            win.center();",
+                    "            win.setTitle('Documentos');",
+                    "            win.case_id        = retorno.data.id;",
+                    "            win.case_number    = retorno.data.case_number;",
+                    "            win.costumer_name  = retorno.data.costumer.name;",
+                    "            win.costumer_id    = retorno.data.costumer.id;",
+                    "            win.fingerTemplate = retorno.data.costumer.fingerTemplate;",
+                    "            win.created_at     = retorno.data.created_at;",
+                    "",
+                    "        },",
+                    "",
+                    "        failure: function(batch){",
+                    "",
+                    "",
+                    "            var retorno = batch.operations[0].error.statusText;",
+                    "",
+                    "            if (retorno === undefined) retorno = batch.operations[0].error;",
+                    "",
+                    "            Camminus.util.Util.showErrorMsg(retorno);",
+                    "",
+                    "        }",
+                    "    });",
+                    "",
+                    "",
+                    "}",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onCasesButtonClick",
+            "designerId": "847e00cc-8205-4fc7-bcb6-05f00f5bfd0a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "buscaCliente",
+                "selector": "#buscacliente"
+            },
+            "name": "buscaCliente",
+            "designerId": "082066e1-b8a5-428b-b3f5-e0da428b3cf2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#refreshCase",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onRefreshButtonClick",
+                "implHandler": [
+                    "this.getCasesStore().load();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onRefreshButtonClick",
+            "designerId": "342a20be-8718-4505-bd3f-69a5eb3bdb94"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "casesForm",
+                "selector": "casesform"
+            },
+            "name": "casesForm",
+            "designerId": "2c82d8b9-b276-4917-857b-b2cd44d10f80"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#addCliente",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onAddCasesCostumerButtonClick",
+                "implHandler": [
+                    "var win    = this.getCostumersForm();",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('costumersform');",
+                    "}",
+                    "",
+                    "win.adding = true;",
+                    "",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onAddCasesCostumerButtonClick",
+            "designerId": "fbf7264e-a8d2-4474-ac5f-5ae50df1c2ee"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#viaClienteEntradaBtn",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onViaClienteEntradaBtnClick",
+                "implHandler": [
+                    "var win = button.up('window');",
+                    "",
+                    "window.open(\"/reports/casesOpen/\" + win.case_id);",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onViaClienteEntradaBtnClick",
+            "designerId": "67df34b1-f33f-41d3-8ba9-ce14779fa7b1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#assDigitalEntrada",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onDigitalEntradaButtonClick",
+                "implHandler": [
+                    "var win = button.up('window');",
+                    "",
+                    "if (win.fingerTemplate === '')",
+                    "{",
+                    "    this.fingerEnroll(win.costumer_id);",
+                    "}",
+                    "else",
+                    "{",
+                    "    this.fingerCheck(win.costumer_id);",
+                    "}",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onDigitalEntradaButtonClick",
+            "designerId": "7413ec32-e056-44b4-9eda-767d9b0d04a9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#gerarEtiquetas",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onGerarEtiquetasButtonClick",
+                "implHandler": [
+                    "var etiqueta = {},",
+                    "    win      = button.up('window'),",
+                    "    dt       = new Date(win.created_at);",
+                    "",
+                    "etiqueta = {",
+                    "    case_number: win.case_number,",
+                    "    nome: win.costumer_name,",
+                    "    data: Ext.Date.format(dt, \"d/m/Y\")",
+                    "};",
+                    "",
+                    "",
+                    "",
+                    "if (\"WebSocket\" in window)",
+                    "{",
+                    "    var ws = new WebSocket(\"ws://192.168.56.101:11100\");",
+                    "",
+                    "    ws.onopen = function()",
+                    "    {",
+                    "        ws.send(JSON.stringify(etiqueta));",
+                    "    };",
+                    "",
+                    "    ws.onmessage = function (evt)",
+                    "    {",
+                    "        var received_msg = evt.data;",
+                    "",
+                    "        if (received_msg == \"true\") Camminus.util.Alert.msg('Sucesso', 'Etiqueta enviada à impressora');",
+                    "    };",
+                    "",
+                    "    ws.onclose = function(evt){};",
+                    "",
+                    "    ws.onerror = function (error) {",
+                    "        alert('WebSocket Error ' + error);",
+                    "",
+                    "    };",
+                    "}",
+                    "else",
+                    "{",
+                    "    // The browser doesn't support WebSocket",
+                    "    alert(\"WebSocket NOT supported by your Browser!\");",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onGerarEtiquetasButtonClick",
+            "designerId": "ec775dda-12bb-44b0-b5d1-544fbc64423c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "costumer_id"
+                ],
+                "fn": "fingerEnroll",
+                "implHandler": [
+                    "if (\"WebSocket\" in window)",
+                    "{",
+                    "",
+                    "    var ws       = new WebSocket(\"ws://192.168.56.101:11101\"),",
+                    "        i        = 0,",
+                    "        formData = new FormData();",
+                    "",
+                    "",
+                    "    ws.onopen = function()",
+                    "    {",
+                    "        ws.send(\"Enroll\");",
+                    "    };",
+                    "",
+                    "    ws.onmessage = function (evt)",
+                    "    {",
+                    "        console.log(evt.data);",
+                    "        if (evt.data !== 'false'){",
+                    "",
+                    "            if (i === 0)",
+                    "            {",
+                    "                formData.append('finger', evt.data, 'finger.fpt');",
+                    "                i = 1;",
+                    "            }",
+                    "            else",
+                    "            {",
+                    "                formData.append('img', evt.data, 'img.jpg');",
+                    "                formData.append('costumer_id', costumer_id);",
+                    "",
+                    "                var ajaxRequest = new XMLHttpRequest();",
+                    "",
+                    "                ajaxRequest.open('POST', '/fingerprints', true);",
+                    "",
+                    "                ajaxRequest.onreadystatechange = function() {",
+                    "                    if (ajaxRequest.readyState == 4) {",
+                    "                        if (ajaxRequest.responseText == \"false\"){",
+                    "                            Camminus.util.Alert.msg('Erro no servidor', 'Digital não cadastrada!');",
+                    "                        }else{",
+                    "                            Camminus.util.Alert.msg('Sucesso', 'Digital cadastrada com sucesso.');",
+                    "                        }",
+                    "                    }",
+                    "                };",
+                    "",
+                    "                ajaxRequest.send(formData);",
+                    "",
+                    "            }",
+                    "        }",
+                    "        else{",
+                    "            Camminus.util.Alert.msg('Erro', 'Digital não cadastrada!');",
+                    "        }",
+                    "",
+                    "    };",
+                    "",
+                    "    ws.onclose = function(){};",
+                    "    ",
+                    "    ws.onerror = function (error) {",
+                    "        alert('WebSocket Error ' + error);",
+                    "",
+                    "    };",
+                    "",
+                    "}",
+                    "else",
+                    "{",
+                    "    // The browser doesn't support WebSocket",
+                    "    alert(\"WebSocket NOT supported by your Browser!\");",
+                    "}"
+                ]
+            },
+            "name": "fingerEnroll",
+            "designerId": "9ffa8c48-d8d0-45c2-8dcd-f62dd76c472d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "costumer_id"
+                ],
+                "fn": "fingerCheck",
+                "implHandler": [
+                    "var ws = new WebSocket(\"ws://192.168.56.101:11102\");",
+                    "",
+                    "ws.onopen = function()",
+                    "{",
+                    "",
+                    "};",
+                    "",
+                    "ws.onmessage = function (evt)",
+                    "{",
+                    "    if (evt.data == \"true\")",
+                    "    {",
+                    "        Camminus.util.Alert.msg('Sucesso', 'Digital verificada com sucesso!');",
+                    "    }",
+                    "    else",
+                    "    {",
+                    "        Camminus.util.Alert.msg('Erro', 'Digital não reconhecida');",
+                    "    }",
+                    "",
+                    "};",
+                    "",
+                    "ws.onclose = function(){};",
+                    "",
+                    "ws.onerror = function (error) {",
+                    "    alert('WebSocket Error ' + error);",
+                    "};",
+                    "",
+                    "var request = new XMLHttpRequest();",
+                    "var params = 'costumer_id=' + costumer_id;",
+                    "",
+                    "request.open('GET', '/fingerprints/' + '?' + params , true);",
+                    "",
+                    "request.responseType = \"arraybuffer\";",
+                    "",
+                    "request.onload = function(oEvent) {",
+                    "",
+                    "    if (request.status == 200){",
+                    "        var blob = new Blob([request.response], {type: \"application/octet-stream\"});",
+                    "        ws.send(blob);",
+                    "    }else{",
+                    "        Camminus.util.Alert.msg('Erro', 'Erro no servidor!');",
+                    "    }",
+                    "};",
+                    "",
+                    "",
+                    "",
+                    "request.send();",
+                    ""
+                ]
+            },
+            "name": "fingerCheck",
+            "designerId": "0cd26fa3-397a-40f7-82cc-3bc110e5bb3b"
+        }
+    ]
+}

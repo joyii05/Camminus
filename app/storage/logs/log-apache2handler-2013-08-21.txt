@@ -1,0 +1,16 @@
+[2013-08-21 02:36:20] log.ERROR: exception 'ErrorException' with message 'Argument 1 passed to Illuminate\Database\Eloquent\Model::fill() must be of the type array, string given, called in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/controllers/UserController.php on line 36 and defined' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:283
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(283): Illuminate\Exception\Handler->handleError(4096, 'Argument 1 pass...', '/Users/geneslun...', 283, Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/controllers/UserController.php(36): Illuminate\Database\Eloquent\Model->fill('{"nome":"fddfd"...')
+#2 [internal function]: UserController->store()
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []

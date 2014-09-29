@@ -1,0 +1,1676 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "casesform",
+        "designer|userClassName": "cases.Form",
+        "height": null,
+        "layout": "card",
+        "margin": null,
+        "modal": true,
+        "title": "Nova Ocorrência",
+        "width": null
+    },
+    "designerId": "ca770aa9-03ff-41a4-b5a7-9e14364664a5",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "container|align": "stretch",
+                "designer|displayName": "Ocorrencia",
+                "layout": "vbox",
+                "title": "",
+                "width": 600
+            },
+            "name": "MyForm5",
+            "designerId": "777b3e35-41f3-4c58-8131-d4e1754587a3",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldContainer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "designer|displayName": "Cliente",
+                        "dock": null,
+                        "fieldLabel": "",
+                        "height": null,
+                        "layout": "hbox",
+                        "layout|flex": 0,
+                        "width": null
+                    },
+                    "name": "MyFieldContainer",
+                    "designerId": "dc857d96-a2d1-4557-a9c3-70edf19262fb",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "designer|displayName": "buscaCliente",
+                                "displayField": "name",
+                                "emptyText": null,
+                                "enableKeyEvents": true,
+                                "fieldLabel": "Cliente",
+                                "hiddenName": null,
+                                "hideTrigger": true,
+                                "itemId": "buscacliente",
+                                "labelWidth": 60,
+                                "layout|flex": 1,
+                                "listConfig": [
+                                    "{",
+                                    "    loadingText: 'Buscando...',",
+                                    "    emptyText: 'Nenhum resultado...'",
+                                    "}"
+                                ],
+                                "margin": "0 5 0 0",
+                                "minChars": 1,
+                                "name": "costumer_id",
+                                "store": "CostumersSearch",
+                                "triggerCls": "x-form-clear-trigger",
+                                "typeAhead": true,
+                                "valueField": "id",
+                                "width": null
+                            },
+                            "name": "MyComboBox2",
+                            "configAlternates": {
+                                "listConfig": "object"
+                            },
+                            "designerId": "620595df-8a53-44c7-8497-e517582cc753",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "listConfig",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "basicfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTriggerClick",
+                                        "implHandler": [
+                                            "this.clearValue();",
+                                            "this.getStore().load();",
+                                            "this.hideTrigger = true;",
+                                            "",
+                                            "",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "onTriggerClick",
+                                    "designerId": "3c110ba6-07b8-4991-95ef-565463aad792"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSearchgridKeyup1",
+                                        "implHandler": [
+                                            "var store = Ext.getStore('CostumersSearch');",
+                                            "",
+                                            "if (textfield.rawValue === ''){",
+                                            "    store.load();",
+                                            "    textfield.hideTrigger = true;",
+                                            "}",
+                                            "else{",
+                                            "    textfield.hideTrigger = false;",
+                                            "}"
+                                        ],
+                                        "name": "keyup",
+                                        "scope": "me"
+                                    },
+                                    "name": "onSearchgridKeyup1",
+                                    "designerId": "2b98954b-e056-4117-affd-c6efa4a3e4f2"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSearchgridSelect1",
+                                        "implHandler": [
+                                            "var store = Ext.getStore('CostumersSearch');",
+                                            "",
+                                            "store.load({",
+                                            "  params: {query: records[0].data.name}",
+                                            "});",
+                                            ""
+                                        ],
+                                        "name": "select",
+                                        "scope": "me"
+                                    },
+                                    "name": "onSearchgridSelect1",
+                                    "designerId": "fa2eeeb1-99f2-46a2-9c2d-96de6d314ecb"
+                                },
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                        ]
+                                    },
+                                    "name": "tpl17",
+                                    "designerId": "8f5b45b5-7204-4ef4-afac-4e1032c6c969"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "addCliente",
+                                "iconCls": "add-button",
+                                "itemId": "addCliente",
+                                "text": ""
+                            },
+                            "name": "MyButton11",
+                            "designerId": "007602b2-7218-45db-b21d-ca30beba9404"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "collapsible": true,
+                        "height": null,
+                        "layout|flex": 1,
+                        "margin": "10 0 0 0",
+                        "padding": null,
+                        "title": "Dados da ocorrência",
+                        "width": 593
+                    },
+                    "name": "MyFieldSet9",
+                    "designerId": "e56e0272-be3a-4869-bab4-9af1ce44c180",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "emptyText": "Descrição do problema relatado pelo cliente...",
+                                "fieldLabel": "Descrição",
+                                "labelAlign": "top",
+                                "layout|anchor": "100%",
+                                "margin": 5,
+                                "name": "descricao",
+                                "rows": 3
+                            },
+                            "name": "MyTextArea4",
+                            "designerId": "714608b7-9443-4537-8252-37aaf25f521a",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                        ]
+                                    },
+                                    "name": "tpl18",
+                                    "designerId": "86e97549-7c24-497b-84ca-d490b86b71df"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldContainer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "designer|displayName": "combosConteiter",
+                                "fieldLabel": "",
+                                "height": null,
+                                "layout": "hbox",
+                                "margin": 5,
+                                "width": null
+                            },
+                            "name": "MyFieldContainer1",
+                            "designerId": "c92f9f73-c731-484c-94ac-00ef3c8e050e",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "designer|displayName": "Tipo",
+                                        "displayField": "name",
+                                        "fieldLabel": "Tipo",
+                                        "labelAlign": "top",
+                                        "layout|flex": 1,
+                                        "margin": "0 0 5 0",
+                                        "name": "tipo",
+                                        "queryMode": "local",
+                                        "store": "cases.Tipo",
+                                        "valueField": "name"
+                                    },
+                                    "name": "MyComboBox3",
+                                    "designerId": "6ac38186-fa0a-4d3f-84d7-31fedbf4b46e",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "afterLabelTextTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "afterLabelTextTpl",
+                                                "implHandler": [
+                                                    "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                ]
+                                            },
+                                            "name": "tpl19",
+                                            "designerId": "b80dc919-b8c2-4221-91a9-ad158366a744"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onComboboxBoxReady",
+                                                "implHandler": [
+                                                    "component.setValue(component.getStore().getAt(0).get(component.valueField),true);",
+                                                    "component.fireEvent('select',component);"
+                                                ],
+                                                "name": "boxready",
+                                                "scope": "me"
+                                            },
+                                            "name": "onComboboxBoxReady",
+                                            "designerId": "8dd3b94b-0a4a-4e17-ace8-0beff74084a5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "designer|displayName": "Prioridade",
+                                        "displayField": "name",
+                                        "fieldLabel": "Prioridade",
+                                        "labelAlign": "top",
+                                        "layout|flex": 1,
+                                        "margin": "0 0 5 5",
+                                        "name": "prioridade",
+                                        "queryMode": "local",
+                                        "store": "cases.Prioridade",
+                                        "valueField": "name"
+                                    },
+                                    "name": "MyComboBox4",
+                                    "designerId": "e44c1e68-1c06-495a-88d4-1f12a5d6c456",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "afterLabelTextTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "afterLabelTextTpl",
+                                                "implHandler": [
+                                                    "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                ]
+                                            },
+                                            "name": "tpl20",
+                                            "designerId": "e4a94970-188d-4f52-91db-b0c8490deac2"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onComboboxBoxReady1",
+                                                "implHandler": [
+                                                    "component.setValue(component.getStore().getAt(0).get(component.valueField),true);",
+                                                    "component.fireEvent('select',component);"
+                                                ],
+                                                "name": "boxready",
+                                                "scope": "me"
+                                            },
+                                            "name": "onComboboxBoxReady1",
+                                            "designerId": "27b8e7bb-22f6-4772-89ff-faeba215bf25"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "designer|displayName": "Previsão",
+                                        "displayField": "name",
+                                        "fieldLabel": "Previsão",
+                                        "labelAlign": "top",
+                                        "layout|flex": 1,
+                                        "margin": "0 0 5 5",
+                                        "name": "previsao",
+                                        "queryMode": "local",
+                                        "store": "cases.Previsao",
+                                        "valueField": "name"
+                                    },
+                                    "name": "MyComboBox5",
+                                    "designerId": "a63a66cf-19d8-4204-a6bf-bd76357da871",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "afterLabelTextTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "afterLabelTextTpl",
+                                                "implHandler": [
+                                                    "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                ]
+                                            },
+                                            "name": "tpl21",
+                                            "designerId": "8fcaa84f-e224-4833-93e6-e9c91cb5fab6"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onComboboxBoxReady2",
+                                                "implHandler": [
+                                                    "component.setValue(component.getStore().getAt(0).get(component.valueField),true);",
+                                                    "component.fireEvent('select',component);"
+                                                ],
+                                                "name": "boxready",
+                                                "scope": "me"
+                                            },
+                                            "name": "onComboboxBoxReady2",
+                                            "designerId": "d9d41873-5eb7-4f15-988f-675e5de9b089"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "designer|displayName": "Situação",
+                                        "displayField": "status",
+                                        "fieldLabel": "Situação",
+                                        "labelAlign": "top",
+                                        "layout|flex": 1,
+                                        "margin": "0 0 5 5",
+                                        "name": "situacao",
+                                        "queryMode": "local",
+                                        "store": "cases.Status",
+                                        "valueField": "status"
+                                    },
+                                    "name": "MyComboBox6",
+                                    "designerId": "89a6ce62-0d11-44cd-847b-2fe741f53b99",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "afterLabelTextTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "afterLabelTextTpl",
+                                                "implHandler": [
+                                                    "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                ]
+                                            },
+                                            "name": "tpl22",
+                                            "designerId": "097afd25-9c65-4e77-a1be-0fd1b585be8c"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onComboboxBoxReady3",
+                                                "implHandler": [
+                                                    "component.setValue(component.getStore().getAt(0).get(component.valueField),true);",
+                                                    "component.fireEvent('select',component);"
+                                                ],
+                                                "name": "boxready",
+                                                "scope": "me"
+                                            },
+                                            "name": "onComboboxBoxReady3",
+                                            "designerId": "7f771de3-a688-4caa-9ab3-8b10925c0817"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "collapsible": true,
+                        "container|align": "stretch",
+                        "container|padding": null,
+                        "layout": "vbox",
+                        "layout|flex": 1,
+                        "margin": "10 0 0 0",
+                        "title": "Equipamento"
+                    },
+                    "name": "MyFieldSet10",
+                    "designerId": "26c88e5f-26a9-409c-9615-cbad278761af",
+                    "cn": [
+                        {
+                            "type": "Ext.form.FieldContainer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "designer|displayName": "container",
+                                "fieldLabel": "",
+                                "height": null,
+                                "layout": "hbox",
+                                "layout|flex": 1,
+                                "margin": 5,
+                                "width": null
+                            },
+                            "name": "MyFieldContainer2",
+                            "designerId": "788701f3-6637-4e67-8020-7537a6d8ea0b",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.FieldContainer",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "stretch",
+                                        "designer|displayName": "right",
+                                        "fieldLabel": "",
+                                        "layout": "vbox",
+                                        "layout|flex": 1,
+                                        "margin": "0 10 0 0",
+                                        "width": 250
+                                    },
+                                    "name": "MyFieldContainer3",
+                                    "designerId": "6858f130-3116-4846-9407-9236be65604e",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.ComboBox",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "allowBlank": false,
+                                                "displayField": "name",
+                                                "fieldLabel": "Tipo",
+                                                "labelWidth": 70,
+                                                "layout|flex": 1,
+                                                "name": "equip_tipo",
+                                                "queryMode": "local",
+                                                "store": "cases.TipoEquip",
+                                                "valueField": "name"
+                                            },
+                                            "name": "MyComboBox7",
+                                            "designerId": "0f731aa3-eeb6-4c89-bd13-7bd978fa3d81",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.XTemplate",
+                                                    "reference": {
+                                                        "name": "afterLabelTextTpl",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|displayName": "afterLabelTextTpl",
+                                                        "implHandler": [
+                                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                        ]
+                                                    },
+                                                    "name": "tpl23",
+                                                    "designerId": "a02dbd4e-815a-4482-b440-f86590b039b6"
+                                                },
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onComboboxSelect",
+                                                        "implHandler": [
+                                                            "var hd = combo.up('panel').down('#equipHD'),",
+                                                            "    cpu = combo.up('panel').down('#equipCPU'),",
+                                                            "    mem = combo.up('panel').down('#equipMEM'),",
+                                                            "    form = combo.up('form');",
+                                                            "",
+                                                            "",
+                                                            "",
+                                                            "if (combo.value == 'Notebook' || combo.value == 'Desktop'){",
+                                                            "",
+                                                            "    setNotRequierd(false);",
+                                                            "",
+                                                            "}",
+                                                            "",
+                                                            "else {",
+                                                            "",
+                                                            "    setNotRequierd(true);",
+                                                            "",
+                                                            "}",
+                                                            "",
+                                                            "function setNotRequierd(param){",
+                                                            "",
+                                                            "    hd.setDisabled(param);",
+                                                            "   hd.allowBlank = param;",
+                                                            "",
+                                                            "   cpu.setDisabled(param);",
+                                                            "   cpu.allowBlank = param;",
+                                                            "",
+                                                            "   mem.setDisabled(param);",
+                                                            "   mem.allowBlank = param;",
+                                                            "",
+                                                            "   form.isValid();",
+                                                            "}"
+                                                        ],
+                                                        "name": "select",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onComboboxSelect",
+                                                    "designerId": "65f14c07-0e96-45be-9e56-1a90f22aa625"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "allowBlank": false,
+                                                "emptyText": "Digite serial do equipamento...",
+                                                "fieldLabel": "N. Serial",
+                                                "labelWidth": 70,
+                                                "layout|flex": 1,
+                                                "name": "equip_serial"
+                                            },
+                                            "name": "MyTextField31",
+                                            "designerId": "7c12a19c-80eb-4dab-99fb-fe3b9d8729e8",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.XTemplate",
+                                                    "reference": {
+                                                        "name": "afterLabelTextTpl",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|displayName": "afterLabelTextTpl",
+                                                        "implHandler": [
+                                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                        ]
+                                                    },
+                                                    "name": "tpl24",
+                                                    "designerId": "35932d26-04a5-497f-882a-4bb5cd90c8f5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "allowBlank": false,
+                                                "emptyText": "HP, Acer, LG...",
+                                                "fieldLabel": "Marca",
+                                                "labelWidth": 70,
+                                                "layout|flex": 1,
+                                                "name": "equip_marca"
+                                            },
+                                            "name": "MyTextField32",
+                                            "designerId": "8aab13a2-d122-4990-a231-4f4501e3ece3",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.XTemplate",
+                                                    "reference": {
+                                                        "name": "afterLabelTextTpl",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|displayName": "afterLabelTextTpl",
+                                                        "implHandler": [
+                                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                        ]
+                                                    },
+                                                    "name": "tpl25",
+                                                    "designerId": "ada266e4-97b0-48b1-8925-952f90d22b2d"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "allowBlank": false,
+                                                "emptyText": "Pavilion, Inspiron...",
+                                                "fieldLabel": "Modelo",
+                                                "labelWidth": 70,
+                                                "layout|flex": 1,
+                                                "name": "equip_modelo"
+                                            },
+                                            "name": "MyTextField33",
+                                            "designerId": "a853c7bc-bbfb-40d0-9fb5-c926dd3cec76",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.XTemplate",
+                                                    "reference": {
+                                                        "name": "afterLabelTextTpl",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|displayName": "afterLabelTextTpl",
+                                                        "implHandler": [
+                                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                        ]
+                                                    },
+                                                    "name": "tpl26",
+                                                    "designerId": "8d745e43-78f3-4c12-8dec-524525f1562a"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.FieldContainer",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "stretch",
+                                        "designer|displayName": "left",
+                                        "fieldLabel": "",
+                                        "layout": "vbox",
+                                        "layout|flex": 1,
+                                        "margin": "0 0 0 10",
+                                        "width": 250
+                                    },
+                                    "name": "MyFieldContainer4",
+                                    "designerId": "415d194b-2f77-4557-ba67-24f3e081a421",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "emptyText": "1 disco de 500 GB...",
+                                                "fieldLabel": "HD",
+                                                "itemId": "equipHD",
+                                                "labelWidth": 70,
+                                                "layout|flex": 1,
+                                                "name": "equip_hd"
+                                            },
+                                            "name": "MyTextField34",
+                                            "designerId": "a30b1a5a-e740-435e-924c-bded2bd3b2be",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.XTemplate",
+                                                    "reference": {
+                                                        "name": "afterLabelTextTpl",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|displayName": "afterLabelTextTpl",
+                                                        "implHandler": [
+                                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                        ]
+                                                    },
+                                                    "name": "tpl27",
+                                                    "designerId": "af660404-f313-475a-aa1e-889427024c85"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "emptyText": "Core i7...",
+                                                "fieldLabel": "CPU",
+                                                "itemId": "equipCPU",
+                                                "labelWidth": 70,
+                                                "layout|flex": 1,
+                                                "name": "equip_cpu"
+                                            },
+                                            "name": "MyTextField35",
+                                            "designerId": "e5ec4470-2965-45b6-bb9c-4f3344ffafd3",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.XTemplate",
+                                                    "reference": {
+                                                        "name": "afterLabelTextTpl",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|displayName": "afterLabelTextTpl",
+                                                        "implHandler": [
+                                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                        ]
+                                                    },
+                                                    "name": "tpl28",
+                                                    "designerId": "018ba533-0280-43e2-a9d7-11223f1c07f5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "emptyText": "2 pentes de 1 GB...",
+                                                "fieldLabel": "Memória",
+                                                "itemId": "equipMEM",
+                                                "labelWidth": 70,
+                                                "layout|flex": 1,
+                                                "name": "equip_mem"
+                                            },
+                                            "name": "MyTextField36",
+                                            "designerId": "2f795a01-a266-457c-a77a-14e299fdec57",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.XTemplate",
+                                                    "reference": {
+                                                        "name": "afterLabelTextTpl",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|displayName": "afterLabelTextTpl",
+                                                        "implHandler": [
+                                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                        ]
+                                                    },
+                                                    "name": "tpl29",
+                                                    "designerId": "46679b32-f604-4dc7-aa43-356715aa24ab"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "allowBlank": false,
+                                                "emptyText": "Carregador, pendrive...",
+                                                "fieldLabel": "Acessórios",
+                                                "labelWidth": 70,
+                                                "layout|flex": 1,
+                                                "name": "equip_acess"
+                                            },
+                                            "name": "MyTextField37",
+                                            "designerId": "70f525ac-aa35-4a2e-bd85-5afc612b8683",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.XTemplate",
+                                                    "reference": {
+                                                        "name": "afterLabelTextTpl",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|displayName": "afterLabelTextTpl",
+                                                        "implHandler": [
+                                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                                        ]
+                                                    },
+                                                    "name": "tpl30",
+                                                    "designerId": "17549745-ce85-4457-8dc7-79059ec35390"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "emptyText": "Arranhões na tampa, dobradiça quebrada, tela com riscos, carregador com fio emendado... ",
+                                "fieldLabel": "Observações",
+                                "height": null,
+                                "labelAlign": "top",
+                                "layout|flex": 1,
+                                "margin": 5,
+                                "name": "equip_obs",
+                                "rows": 2
+                            },
+                            "name": "MyTextArea5",
+                            "designerId": "21fa269d-092d-4bbd-82a6-8d49b86b9417",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                        ]
+                                    },
+                                    "name": "tpl31",
+                                    "designerId": "53d7b275-95f3-4441-a2b5-6830dd2ace77"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "id",
+                        "dock": "top",
+                        "fieldLabel": "Label",
+                        "layout|flex": 1,
+                        "name": "id"
+                    },
+                    "name": "MyHiddenField3",
+                    "designerId": "238befa8-ed78-47e3-9976-63eb89b4b3fe"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|flex": 1,
+                        "name": "services"
+                    },
+                    "name": "MyHiddenField4",
+                    "designerId": "ce176cf0-0429-4d6c-bd60-bf2a988eac7c"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "toolbar",
+                        "designer|uiInterfaceName": "footer",
+                        "dock": "bottom",
+                        "layout|flex": 1,
+                        "ui": "footer"
+                    },
+                    "name": "MyToolbar4",
+                    "designerId": "301f0071-7d1e-46a8-9950-3c41c6a89a2f",
+                    "cn": [
+                        {
+                            "type": "Ext.resizer.Splitter",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1
+                            },
+                            "name": "MySplitter",
+                            "designerId": "d9ac93f1-cc90-4825-bdb4-4c129ad456a2"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "Cancelar"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "65086007-6578-472f-957f-8c3a3e9eedcc",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "this.up('window').close();"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "127740d2-5a09-416a-9622-8d59ca430f4d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "itemId": "casesNextButton",
+                                "layout|flex": null,
+                                "text": "Avançar"
+                            },
+                            "name": "MyButton13",
+                            "designerId": "546e5d45-4455-4c9c-b414-b7cc2f5151c8",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var clienteField = button.up('window').down('#buscacliente'),",
+                                            "    win          = this.up('window');",
+                                            "",
+                                            "",
+                                            "if (clienteField.value !== null ){",
+                                            "    win.getLayout().setActiveItem(1);",
+                                            "    win.center();",
+                                            "    win.setTitle('Escolha os serviços');",
+                                            "    ",
+                                            "}else{",
+                                            "    Camminus.util.Alert.msg('Erro', 'O Cliente escolhido é inválido.');",
+                                            "}"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "e2c34d17-dbcc-4589-8fd8-493072558862"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onFormValidityChange",
+                        "implHandler": [
+                            "if (valid) {",
+                            "    this.down('button#casesNextButton').setDisabled(false);",
+                            "}else{",
+                            "   this.down('button#casesNextButton').setDisabled(true);",
+                            "}"
+                        ],
+                        "name": "validitychange",
+                        "scope": "me"
+                    },
+                    "name": "onFormValidityChange",
+                    "designerId": "cda29b2a-df40-4105-ab97-f60950ca54d4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Services",
+                "itemId": "casesServicesGrid",
+                "layout": "fit",
+                "title": "",
+                "width": 800
+            },
+            "name": "MyPanel1",
+            "designerId": "ef9fece7-31e7-46b5-aa58-d42fffcaa832",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyBorder": true,
+                        "designer|displayName": "casesSevicesGrid",
+                        "header": false,
+                        "height": 200,
+                        "itemId": null,
+                        "store": "cases.Services",
+                        "title": null,
+                        "width": null
+                    },
+                    "name": "MyGridPanel",
+                    "designerId": "5d32d86f-524b-450a-8b3f-984218037d8f",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "GridTopToolbar",
+                                "dock": "top",
+                                "itemId": "toptoolBar",
+                                "ui": "footer"
+                            },
+                            "name": "MyToolbar5",
+                            "designerId": "f9b00cb0-d690-4954-a0e3-810642f445a6",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "name",
+                                        "emptyText": null,
+                                        "enableKeyEvents": true,
+                                        "fieldLabel": "Label",
+                                        "hideLabel": true,
+                                        "itemId": "casesServicesSearch",
+                                        "layout|flex": 1,
+                                        "listConfig": [
+                                            "{",
+                                            "    loadingText: 'Buscando...',",
+                                            "    emptyText: 'Nenhum resultado...'",
+                                            "}"
+                                        ],
+                                        "minChars": 1,
+                                        "queryMode": null,
+                                        "store": "Services",
+                                        "triggerCls": "x-form-search-trigger",
+                                        "typeAhead": true,
+                                        "width": 270
+                                    },
+                                    "name": "MyComboBox8",
+                                    "configAlternates": {
+                                        "listConfig": "object"
+                                    },
+                                    "designerId": "84966d7d-a0e9-429a-aaad-85be3d4a9497",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "listConfig",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "add-button",
+                                        "layout|flex": null,
+                                        "text": "Adicionar Serviço"
+                                    },
+                                    "name": "MyButton14",
+                                    "designerId": "ce2dfe25-96ad-4efe-8af0-4974b653b5e7",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "var searchField = button.up('panel').down('#casesServicesSearch'),",
+                                                    "    record      = searchField.findRecordByValue(searchField.value),",
+                                                    "    store       = button.up('grid').getStore(),",
+                                                    "    saveBtn     = this.up('#casesServicesGrid').down('#casesButton');",
+                                                    "",
+                                                    "store.add(record.data);",
+                                                    "store.sync();",
+                                                    "",
+                                                    "searchField.clearValue();",
+                                                    "",
+                                                    "saveBtn.setDisabled(false);",
+                                                    "",
+                                                    "",
+                                                    "",
+                                                    ""
+                                                ]
+                                            },
+                                            "name": "handler",
+                                            "designerId": "48334845-56a1-4fdb-bc87-ff0246c037ef"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "iconCls": "delete-button",
+                                        "itemId": "removeServiceFromCase",
+                                        "layout|flex": null,
+                                        "text": "Remover Serviço"
+                                    },
+                                    "name": "MyButton15",
+                                    "designerId": "cd4a77ed-daa3-497d-bdc2-2e789bec6324",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "var grid    = button.up('grid'),",
+                                                    "    record  = grid.getSelectionModel().getSelection(),",
+                                                    "    store   = grid.getStore(),",
+                                                    "    saveBtn = this.up('#casesServicesGrid').down('#casesButton');",
+                                                    "",
+                                                    "",
+                                                    "Ext.Msg.show({",
+                                                    "",
+                                                    "    title: translations.msg_title_delete,",
+                                                    "    msg: translations.msg_delete,",
+                                                    "    buttons: Ext.Msg.YESNO,",
+                                                    "    icon: Ext.Msg.QUESTION,",
+                                                    "    fn: function (buttonId){",
+                                                    "",
+                                                    "        if (buttonId == 'yes'){",
+                                                    "            store.remove(record);",
+                                                    "        }",
+                                                    "    }",
+                                                    "",
+                                                    "});",
+                                                    "",
+                                                    "console.log(store.getCount());",
+                                                    "",
+                                                    "if (store.getCount() == 1) {",
+                                                    "    button.setDisabled(true);",
+                                                    "    saveBtn.setDisabled(true);",
+                                                    "}",
+                                                    ""
+                                                ]
+                                            },
+                                            "name": "handler",
+                                            "designerId": "1cdd68be-54a8-4eac-b028-635415f25bf8"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "GridView",
+                                "width": null
+                            },
+                            "name": "MyGridView",
+                            "designerId": "72c35144-4ec6-4466-8ef1-ba7d939dedcb"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "name",
+                                "flex": 2,
+                                "text": "Nome"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "b90cdba9-de88-4f57-97e8-44041ab28ded"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "description",
+                                "flex": 3,
+                                "text": "Descrição"
+                            },
+                            "name": "MyColumn1",
+                            "designerId": "bd3c90b0-a95c-446f-864d-4e17b03579f4"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "preco",
+                                "flex": null,
+                                "text": "Preço",
+                                "width": 115
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "03bbb9ea-e782-404c-bb02-52eadba1c933"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGridpanelSelect",
+                                "implHandler": [
+                                    "this.down('button#removeServiceFromCase').setDisabled(false);"
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "name": "onGridpanelSelect",
+                            "designerId": "ee1f3216-520a-4db3-9c07-ca28b1cb1118"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "toolbar",
+                        "designer|uiInterfaceName": "footer",
+                        "dock": "bottom",
+                        "ui": "footer"
+                    },
+                    "name": "MyToolbar6",
+                    "designerId": "53df9581-7d03-48d3-a06f-33408e226662",
+                    "cn": [
+                        {
+                            "type": "Ext.resizer.Splitter",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1
+                            },
+                            "name": "MySplitter1",
+                            "designerId": "40a2122c-0cbc-4d69-8d6a-57c5d964e0dc"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "Voltar"
+                            },
+                            "name": "MyButton16",
+                            "designerId": "667deaa5-ed56-4302-980a-057c26133193",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "this.up('window').getLayout().setActiveItem(0);",
+                                            "this.up('window').center();"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "7eef075f-c813-461f-8f43-b2c9d5198d9b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "itemId": "casesButton",
+                                "layout|flex": null,
+                                "text": "Salvar"
+                            },
+                            "name": "MyButton17",
+                            "designerId": "47d0bb90-1ec2-4f11-81e4-cdeb078b23de"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "container|padding": null,
+                "designer|displayName": "Documentos",
+                "layout": "vbox",
+                "padding": "5 5 5 5 ",
+                "title": "",
+                "width": 200
+            },
+            "name": "MyPanel2",
+            "designerId": "6416c0c2-a115-45bd-8496-2e00d93b712b",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "untitled-ui-7-medium",
+                        "height": 60,
+                        "iconCls": "printer",
+                        "itemId": "viaClienteEntradaBtn",
+                        "margin": 5,
+                        "padding": "0 0 0 15",
+                        "scale": "medium",
+                        "text": "Via do Cliente",
+                        "ui": "untitled-ui-7"
+                    },
+                    "name": "MyButton18",
+                    "designerId": "1c753370-165d-47d8-873e-8b89c1eb4985"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "untitled-ui-7-medium",
+                        "height": 60,
+                        "iconCls": "finger",
+                        "itemId": "assDigitalEntrada",
+                        "margin": 5,
+                        "padding": "0 0 0 15",
+                        "scale": "medium",
+                        "text": "Assinatura Digital",
+                        "ui": "untitled-ui-7"
+                    },
+                    "name": "MyButton19",
+                    "designerId": "8db154fe-7005-4651-9eda-2391db2f633a"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "untitled-ui-7-medium",
+                        "height": 60,
+                        "iconCls": "etiqueta",
+                        "itemId": "gerarEtiquetas",
+                        "margin": 5,
+                        "padding": "0 0 0 15",
+                        "scale": "medium",
+                        "text": "Gerar Etiquetas",
+                        "ui": "untitled-ui-7"
+                    },
+                    "name": "MyButton20",
+                    "designerId": "1c2661f9-aaee-4b65-8955-4165dc99bbc9"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "untitled-ui-7-medium",
+                        "iconAlign": "top",
+                        "iconCls": null,
+                        "margin": 5,
+                        "scale": "medium",
+                        "text": "Fechar",
+                        "ui": "untitled-ui-7"
+                    },
+                    "name": "MyButton21",
+                    "designerId": "3983761f-9252-4666-8f76-6965cf76aeee",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "this.up('window').close();"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "bebf9fb1-ef38-40e3-8c79-1f9ef9679407"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

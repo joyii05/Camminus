@@ -1,0 +1,14 @@
+[2014-09-04 19:35:57] production.ERROR: exception 'InvalidArgumentException' with message 'There are no commands defined in the "migration" namespace.
+
+Did you mean this?
+    migrate' in /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php:514
+Stack trace:
+#0 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(548): Symfony\Component\Console\Application->findNamespace('migration')
+#1 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(188): Symfony\Component\Console\Application->find('migration:insta...')
+#2 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#4 {main} [] []
+[2014-09-04 22:38:12] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'case_number_seq' (T_STRING)' in /var/www/camminus/app/database/migrations/2014_07_18_164645_create_cases_table.php:49
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

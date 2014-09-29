@@ -1,0 +1,351 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Services",
+        "models": [
+            "Service"
+        ],
+        "stores": [
+            "Services"
+        ],
+        "views": [
+            "services.Grid",
+            "services.Form"
+        ]
+    },
+    "designerId": "6c227794-3f66-4fe4-8182-defe188a3582",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "servicesGrid",
+                "selector": "servicesgrid",
+                "xtype": null
+            },
+            "name": "servicesGrid",
+            "designerId": "29aae40e-a1eb-482b-9901-b4066e880095"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "servicesgrid",
+                "designer|targetType": "services.Grid",
+                "fn": "onServicesGridpanelRender",
+                "implHandler": [
+                    "this.getServicesStore().load();",
+                    ""
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onServicesGridpanelRender",
+            "designerId": "f1cbe072-b617-4f71-8c38-d046efa34490"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#deleteRole",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onDeleteButtonClick",
+                "implHandler": [
+                    "var grid = this.getRolesGrid(),",
+                    "    record = grid.getSelectionModel().getSelection(),",
+                    "    store = grid.getStore();",
+                    "",
+                    "",
+                    "if (record[0].data.name == \"Admin\"){",
+                    "    Ext.Msg.show({",
+                    "        title: translations.msg_title_warning,",
+                    "        msg: \"Não é possível apagar o grupo 'Admin'.\",",
+                    "        buttons: Ext.Msg.OK,",
+                    "        icon: Ext.Msg.WARNING",
+                    "    });",
+                    "}",
+                    "",
+                    "",
+                    "// Ext.Msg.show({",
+                    "",
+                    "//     title: translations.msg_title_delete,",
+                    "//     msg: translations.msg_delete,",
+                    "//     buttons: Ext.Msg.YESNO,",
+                    "//     icon: Ext.Msg.QUESTION,",
+                    "//     fn: function (buttonId){",
+                    "//         console.log(buttonId);",
+                    "//         if (buttonId == 'yes'){",
+                    "//             store.remove(record);",
+                    "//             store.sync();",
+                    "//         }",
+                    "//     }",
+                    "",
+                    "// });",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onDeleteButtonClick",
+            "designerId": "4175a6f7-8d95-4a15-a25e-2f91664bf17e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#addService",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onAddNewService",
+                "implHandler": [
+                    "var win    = this.getServicesForm();",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('servicesform');",
+                    "}",
+                    "",
+                    "win.adding = true;",
+                    "",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onAddNewService",
+            "designerId": "2e7c1e2c-f3f9-4842-8d46-679370460991"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "servicesForm",
+                "selector": "servicesform"
+            },
+            "name": "servicesForm",
+            "designerId": "e4031b50-38f9-44c5-8d51-cd7d7d66f31b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#servicesButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onServicesButtonClick",
+                "implHandler": [
+                    "var win    = button.up('window'),",
+                    "    formPanel   = win.down('form'),",
+                    "    values = formPanel.getValues(),",
+                    "    store  = this.getServicesStore(),",
+                    "    grid   = this.getServicesGrid();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "if(formPanel.getForm().isValid()) {",
+                    "",
+                    "",
+                    "    //Save",
+                    "    if(button.text === 'Salvar'){",
+                    "        store.add(values);",
+                    "",
+                    "        if (grid){",
+                    "             grid.getSelectionModel().select(store.getNewRecords());",
+                    "        }",
+                    "",
+                    "    }",
+                    "    //Update",
+                    "    else{",
+                    "        formPanel.updateRecord();",
+                    "    }",
+                    "",
+                    "    store.sync();",
+                    "",
+                    "    win.close();",
+                    "",
+                    "",
+                    "}",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onServicesButtonClick",
+            "designerId": "8f9b98ec-7057-479b-b3a2-ca05d454948f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#editService",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onEditServicesButtonClick",
+                "implHandler": [
+                    "var win = this.getServicesForm(),",
+                    "    grid = button.up('servicesgrid'),",
+                    "    record = grid.getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('servicesform');",
+                    "}",
+                    "",
+                    "",
+                    "win.setTitle(record[0].get('name'));",
+                    "win.down('form').loadRecord(record[0]);",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onEditServicesButtonClick",
+            "designerId": "b2398335-3c02-46cd-86f6-e585d7676730"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#deleteService",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onDeleteServiceButtonClick",
+                "implHandler": [
+                    "var grid = this.getServicesGrid(),",
+                    "    record = grid.getSelectionModel().getSelection(),",
+                    "    store = grid.getStore();",
+                    "",
+                    "",
+                    "Ext.Msg.show({",
+                    "",
+                    "    title: translations.msg_title_delete,",
+                    "    msg: translations.msg_delete,",
+                    "    buttons: Ext.Msg.YESNO,",
+                    "    icon: Ext.Msg.QUESTION,",
+                    "    fn: function (buttonId){",
+                    "        console.log(buttonId);",
+                    "        if (buttonId == 'yes'){",
+                    "            store.remove(record);",
+                    "            store.sync();",
+                    "        }",
+                    "    }",
+                    "",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onDeleteServiceButtonClick",
+            "designerId": "81d197c2-e1f8-4510-8d6d-8c2ba00bfc2e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#refreshService",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onRefreshServicesButtonClick",
+                "implHandler": [
+                    "this.getServicesStore().load();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onRefreshServicesButtonClick",
+            "designerId": "04563c83-81dd-4537-9db3-4ef39841d42a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "servicesgrid",
+                "designer|targetType": "services.Grid",
+                "fn": "onServicesGridpanelItemDblClick",
+                "implHandler": [
+                    "var win = this.getServicesForm();",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('servicesform');",
+                    "}",
+                    "",
+                    "win.setTitle(record.get('name'));",
+                    "win.down('form').loadRecord(record);",
+                    "win.show();"
+                ],
+                "name": "itemdblclick",
+                "scope": "me"
+            },
+            "name": "onServicesGridpanelItemDblClick",
+            "designerId": "ed709f6d-add6-412a-8ef2-00229ac5a186"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#casesServicesGrid",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onCasesServicesGridpanelRender",
+                "implHandler": [
+                    "this.getServicesStore().load();"
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onCasesServicesGridpanelRender",
+            "designerId": "47c63d29-c6e0-49c4-9544-f55a5384233e"
+        }
+    ]
+}

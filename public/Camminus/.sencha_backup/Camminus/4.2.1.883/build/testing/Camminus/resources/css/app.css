@@ -1,0 +1,167 @@
+/* Icons (iconCls) */
+
+.user-small { 
+	background-image:url('../icons/user-small.png') !important;
+}
+
+.user-small-blue { 
+	background-image:url('../icons/user-small-blue.png') !important;
+}
+
+.user {
+	background-image: url('../icons/user16.png') !important;
+}
+
+.user-blue {
+	background-image: url('../icons/user16-blue.png') !important;
+}
+
+.home {
+	background-image: url('../icons/home.png') !important;
+}
+
+
+.keys {
+	background-image: url('../icons/key-2.png') !important;
+}
+
+.login {
+	background-image: url('../icons/login.png') !important;
+}
+
+.add-button {
+	background-image: url('../icons/add_white.png') !important;
+}
+
+.edit-button {
+	background-image: url('../icons/edit_white.png') !important;
+}
+
+.delete-button {
+	background-image: url('../icons/delete_white.png') !important;
+}
+
+.refresh-button {
+	background-image: url('../icons/refresh_white.png') !important;
+}
+
+.search {
+	background-image: url('../icons/search16.png') !important;
+}
+
+/** Menu Icons */
+
+.menu-lab {
+	background-image: url('../icons/lab16.png') !important;
+}
+
+.menu-contacts {
+	background-image: url('../icons/contacts16.png') !important;
+}
+
+.menu-tickts {
+	background-image: url('../icons/tickts16.png') !important;
+}
+
+.menu-cash {
+	background-image: url('../icons/cash16.png') !important;
+}
+
+.menu-reports {
+	background-image: url('../icons/reports16.png') !important;
+}
+
+.menu-cargo {
+	background-image: url('../icons/cargo16.png') !important;
+}
+
+.menu-config {
+	background-image: url('../icons/config16.png') !important;
+}
+
+.menu-admin {
+	background-image: url('../icons/admin16.png') !important;
+}
+
+.menu-user-profile {
+	background-image: url('../icons/profile16.png') !important;
+}
+
+.menu-user-dashboard {
+	background-image: url('../icons/dashboard16.png') !important;
+}
+
+.menu-list {
+	background-image: url('../icons/list16.png') !important;
+}
+
+.menu-add {
+	background-image: url('../icons/add16.png') !important;
+}
+
+.menu-search {
+	background-image: url('../icons/search16.png') !important;
+}
+
+
+/** flags */
+
+.pt_BR {
+  background-image:url('../flags/br.png') !important;
+  background-repeat: no-repeat;
+}
+
+.en {
+  background-image:url('../flags/us.png') !important;
+  background-repeat: no-repeat;
+}
+
+.es {
+  background-image:url('../flags/es.png') !important;
+  background-repeat: no-repeat;
+}
+
+/* No Image */
+
+.no-image {
+	background-image: url('../icons/no_image.png') !important;
+}
+
+
+/* Splashscreen */
+
+.x-mask.splashscreen{
+	background-color: white;
+	opacity: 1; 
+} 
+
+.x-mask-msg.splashscreen, 
+
+.x-mask-msg.splashscreen div { 
+	font-size: 16px; 
+	font-weight: bold; 
+	padding: 30px 5px 5px 50px; 
+	
+	border:none;
+	margin-top: -38px; 
+	margin-left: -45px;
+	background-color: transparent;
+	background-position: top center; 
+} 
+
+.x-message-box .x-window-body .x-box-inner { 
+	min-height: 110px !important;
+} 
+
+.x-splash-icon { 
+	background-image: url('../images/camminus.png') !important; 
+	margin-top: -30px; 
+	margin-bottom: 15px;
+	margin-left: 15px; 
+	height: 50px;
+	width: 240px;
+	background-repeat: no-repeat;
+}
+
+
+

@@ -1,0 +1,509 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyBorder": true,
+        "designer|userAlias": "companiesgrid",
+        "designer|userClassName": "companies.Grid",
+        "header": false,
+        "height": 315,
+        "store": "Companies",
+        "title": "Usuários",
+        "width": 1233
+    },
+    "designerId": "7cd85498-91a2-45c0-9165-c85d41e4b9cc",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "UsersGridTopToolbar",
+                "dock": "top",
+                "itemId": "toptoolBar",
+                "ui": "footer"
+            },
+            "name": "MyToolbar8",
+            "designerId": "6b87f13d-b120-419e-a33e-2c31e94074e2",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "company_name",
+                        "emptyText": null,
+                        "enableKeyEvents": true,
+                        "fieldLabel": "Label",
+                        "hideLabel": true,
+                        "hideTrigger": true,
+                        "itemId": "searchusergrid",
+                        "layout|flex": null,
+                        "listConfig": [
+                            "{",
+                            "    loadingText: 'Buscando...',",
+                            "    emptyText: 'Nenhum resultado...'",
+                            "}"
+                        ],
+                        "minChars": 1,
+                        "store": "Companies",
+                        "triggerCls": "x-form-clear-trigger",
+                        "typeAhead": true,
+                        "width": 270
+                    },
+                    "name": "MyComboBox10",
+                    "configAlternates": {
+                        "listConfig": "object"
+                    },
+                    "designerId": "baec0547-74cd-4318-9727-dc15e744d763",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "listConfig",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTriggerClick",
+                                "implHandler": [
+                                    "this.clearValue();",
+                                    "this.getStore().load();",
+                                    "this.hideTrigger = true;",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "onTriggerClick",
+                            "designerId": "facce676-b949-4537-a6a1-39d43e3b64ff"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSearchgridKeyup",
+                                "implHandler": [
+                                    "var store = this.getStore();",
+                                    "",
+                                    "if (textfield.rawValue === ''){",
+                                    "    store.load();",
+                                    "    textfield.hideTrigger = true;",
+                                    "}",
+                                    "else{",
+                                    "    textfield.hideTrigger = false;",
+                                    "}"
+                                ],
+                                "name": "keyup",
+                                "scope": "me"
+                            },
+                            "name": "onSearchgridKeyup",
+                            "designerId": "3a6229bf-33ac-4896-9e12-0c6ed426cffe"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSearchgridSelect",
+                                "implHandler": [
+                                    "var store = this.getStore();",
+                                    "",
+                                    "store.load({",
+                                    "  params: {query: records[0].data.company_name}",
+                                    "});",
+                                    ""
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "name": "onSearchgridSelect",
+                            "designerId": "9b2cc266-7eec-4e63-a118-66c14cd46c08"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 16,
+                        "imgCls": "search",
+                        "layout|flex": null,
+                        "width": 16
+                    },
+                    "name": "MyImg5",
+                    "designerId": "205ef0ee-9fbf-4b07-8541-0682b49b5bcb"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "HeaderFill",
+                        "layout|flex": null
+                    },
+                    "name": "MyFill6",
+                    "designerId": "103ae3f5-52ef-4dec-9433-62dccd8188ac"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": "right",
+                        "iconCls": "add-button",
+                        "itemId": "new",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton26",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "9d8ed6cf-ea2a-4ef4-b6d6-82c524d2c27b",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processNew",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_new;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processNew",
+                            "designerId": "74830e6f-d3d2-4221-b53d-4d5cecb6180f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "iconAlign": "right",
+                        "iconCls": "edit-button",
+                        "itemId": "editCompany",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton27",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "14f86b0d-1235-43d2-b0b3-b9e3acf8c18b",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processEditCompany",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_edit;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processEditCompany",
+                            "designerId": "4bde794d-6c75-4c27-ac03-0543f292554a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "iconAlign": "right",
+                        "iconCls": "delete-button",
+                        "itemId": "deleteCompany",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton28",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "f3cb0a3d-3c2b-44bd-bed7-7cc477fbede9",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processDeleteCompany",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_delete;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processDeleteCompany",
+                            "designerId": "6f81aa60-ac06-4542-9cea-70ad157cb109"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": "right",
+                        "iconCls": "refresh-button",
+                        "itemId": "refreshcompanies",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton29",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "accb8481-e408-4631-b6ed-76b108f7ef81",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processRefreshcompanies",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_refresh;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processRefreshcompanies",
+                            "designerId": "daec578e-6213-43a1-be51-5444e1a54f9d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "UsersGridView",
+                "width": null
+            },
+            "name": "MyGridView2",
+            "designerId": "792e9dd8-3a86-430c-b660-389a4922f0ee"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "UsersGridToolbar",
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "Companies",
+                "ui": null,
+                "width": 360
+            },
+            "name": "MyPagingToolbar1",
+            "designerId": "6654ca8d-de51-4066-bb2c-703ee52c5526"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridpanelSelect",
+                "implHandler": [
+                    "this.down('button#editCompany').setDisabled(false);",
+                    "this.down('button#deleteCompany').setDisabled(false);",
+                    "",
+                    ""
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "name": "onGridpanelSelect",
+            "designerId": "167ced8b-c483-4372-829c-ba1a8c913158"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "company_name",
+                "flex": 2,
+                "text": "Nome de Fantasia"
+            },
+            "name": "MyColumn7",
+            "designerId": "e75d82df-9910-4fd2-b667-d67a194c0987"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "corporate_name",
+                "flex": 2,
+                "text": "Razão Social"
+            },
+            "name": "MyColumn8",
+            "designerId": "3f8aeca3-ddec-4fdb-ab06-772f0d826d06"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "email",
+                "flex": 1,
+                "text": "Email"
+            },
+            "name": "MyColumn9",
+            "designerId": "676e9adc-0860-47df-bd48-f934b637f7fb"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "document",
+                "flex": 1,
+                "text": "CNPJ"
+            },
+            "name": "MyColumn10",
+            "designerId": "a268c8a3-e53f-4de1-a8a0-f9a3b44dfa4d"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "phone",
+                "text": "Phone"
+            },
+            "name": "MyColumn11",
+            "designerId": "ebae7fc1-42ae-4728-8d11-d62f748fd1bc"
+        },
+        {
+            "type": "Ext.grid.column.CheckColumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "is_active",
+                "text": "Ativo",
+                "width": 49
+            },
+            "name": "MyCheckColumn1",
+            "designerId": "c951da77-7004-4fd7-8374-6cef8cb20a59"
+        },
+        {
+            "type": "Ext.grid.column.CheckColumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "is_parent",
+                "text": "Matriz",
+                "width": 55
+            },
+            "name": "MyCheckColumn2",
+            "designerId": "3939734c-c8ff-46e9-88f8-a2a3d5022909"
+        }
+    ]
+}

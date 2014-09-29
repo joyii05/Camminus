@@ -1,0 +1,110 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menu.Item",
+        "uses": [
+            "Camminus.model.menu.Root"
+        ]
+    },
+    "designerId": "ebcc3886-f870-4c72-828e-4850faba771e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "name": "MyField95",
+            "designerId": "c29dcf6f-198e-4f48-87cd-602e7bea2031"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "iconCls"
+            },
+            "name": "MyField96",
+            "designerId": "8a752fd3-5b81-47a3-995d-816c64e9effb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "className"
+            },
+            "name": "MyField97",
+            "designerId": "da0d296b-0143-4937-9d61-ffb9231eeff3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "classType"
+            },
+            "name": "MyField98",
+            "designerId": "4cfe92e5-f967-4d0a-9713-25a720e37832"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "parent_id"
+            },
+            "name": "MyField99",
+            "designerId": "cfffb4e4-cdb1-4cbc-af66-f269a233c956"
+        },
+        {
+            "type": "Ext.data.association.BelongsTo",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "belongsTomenu.Root",
+                "foreignKey": "parent_id",
+                "model": "menu.Root"
+            },
+            "name": "MyBelongsToAssociation1",
+            "designerId": "835a1e8e-5d35-40c3-b32d-43712cc54a30"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField100",
+            "designerId": "07316f51-7cce-49a1-a479-d67cfd403600"
+        }
+    ]
+}

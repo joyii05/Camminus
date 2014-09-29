@@ -1,0 +1,37 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "autoSync": true,
+        "designer|userClassName": "Companies",
+        "leadingBufferZone": 300,
+        "model": "Company",
+        "pageSize": 30,
+        "remoteSort": true,
+        "storeId": "Companies"
+    },
+    "designerId": "d82bd94b-9a8a-4db4-b3c4-f206ba0ec339",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "nameSorter",
+                "direction": null,
+                "property": "company_name",
+                "root": null
+            },
+            "name": "MySorter4",
+            "designerId": "41d95603-5c0d-4f56-b078-679460dfd6d6"
+        }
+    ]
+}

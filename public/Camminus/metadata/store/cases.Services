@@ -1,0 +1,68 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": null,
+        "designer|userClassName": "cases.Services",
+        "storeId": "cases.Services"
+    },
+    "designerId": "2f336748-7aec-4c57-b21b-30b731e6d620",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField29",
+            "designerId": "edfb36e3-8571-4e72-bca9-0569a8df08a5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField30",
+            "designerId": "60706b5b-8f80-4e58-9b71-7df5d741f093"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "description"
+            },
+            "name": "MyField31",
+            "designerId": "28304f56-ca7f-475e-80d3-ec65305ded6f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "preco"
+            },
+            "name": "MyField32",
+            "designerId": "54b4587f-3bfc-4161-875f-f6472567a967"
+        }
+    ]
+}

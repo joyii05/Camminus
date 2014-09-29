@@ -1,0 +1,371 @@
+[2013-10-28 04:18:45] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:34
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(34): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 34, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 04:18:55] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:34
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(34): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 34, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 04:20:26] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:34
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(34): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 34, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 04:20:40] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:34
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(34): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 34, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 04:22:26] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:34
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(34): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 34, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 04:23:51] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:34
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(34): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 34, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 04:24:45] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:34
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(34): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 34, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 04:27:27] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:36
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(36): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 36, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 04:28:02] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:36
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(36): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 36, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 04:28:07] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:36
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(36): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 36, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 04:28:48] log.ERROR: exception 'ErrorException' with message 'Object of class Illuminate\Database\Eloquent\Builder could not be converted to string' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:15
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(4096, 'Object of class...', '/Users/geneslun...', 15, Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(15): printf('Object')
+#2 [internal function]: MenuController->index()
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []
+[2013-10-28 19:21:38] log.ERROR: exception 'ErrorException' with message 'Object of class Illuminate\Database\Eloquent\Builder could not be converted to string' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php:361
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php(361): Illuminate\Exception\Handler->handleError(4096, 'Object of class...', '/Users/geneslun...', 361, Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Http/Response.php(73): Symfony\Component\HttpFoundation\Response->setContent(Object(Illuminate\Database\Eloquent\Builder))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\Database\Eloquent\Builder))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\Database\Eloquent\Builder))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\Database\Eloquent\Builder), Object(Illuminate\Http\Request))
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'index', Object(Illuminate\Database\Eloquent\Builder))
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#7 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
+[2013-10-28 19:25:58] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ':'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:14
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 19:28:14] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function find()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:14
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 19:28:38] log.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:25
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(25): Illuminate\Exception\Handler->handleError(8, 'Trying to get p...', '/Users/geneslun...', 25, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 19:30:43] log.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:25
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(25): Illuminate\Exception\Handler->handleError(8, 'Trying to get p...', '/Users/geneslun...', 25, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 19:32:27] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function orderBy() on a non-object' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:12
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 19:32:39] log.ERROR: exception 'ErrorException' with message 'Invalid argument supplied for foreach()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:15
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(15): Illuminate\Exception\Handler->handleError(2, 'Invalid argumen...', '/Users/geneslun...', 15, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 19:33:00] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Eloquent\Collection::orderBy()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:12
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 19:35:47] log.ERROR: exception 'ErrorException' with message 'Undefined property: Illuminate\Database\Eloquent\Builder::$menus' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:12
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(12): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', '/Users/geneslun...', 12, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 19:35:55] log.ERROR: exception 'ErrorException' with message 'Undefined property: Illuminate\Database\Eloquent\Builder::$menus' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:12
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(12): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', '/Users/geneslun...', 12, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 19:36:26] log.ERROR: exception 'ErrorException' with message 'Undefined variable: items' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:34
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(34): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 34, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 19:37:36] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Eloquent\Collection::orderBy()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:12
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 19:40:21] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:12
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 19:40:25] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:12
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 19:44:47] log.ERROR: exception 'ErrorException' with message 'asort() expects parameter 1 to be array, object given' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:14
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'asort() expects...', '/Users/geneslun...', 14, Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(14): asort(Object(Illuminate\Database\Eloquent\Collection))
+#2 [internal function]: MenuController->index()
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []
+[2013-10-28 19:45:14] log.ERROR: exception 'ErrorException' with message 'Undefined index: attributes' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:18
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(18): Illuminate\Exception\Handler->handleError(8, 'Undefined index...', '/Users/geneslun...', 18, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 19:49:53] log.ERROR: exception 'ErrorException' with message 'Undefined variable: menus' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:15
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php(15): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/Users/geneslun...', 15, Array)
+#1 [internal function]: MenuController->index()
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-10-28 19:50:02] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Eloquent\Collection::orderBy()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:21
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 20:33:07] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Eloquent\Collection::orderBy()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:21
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 20:33:16] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Eloquent\Collection::orderBy()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:21
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 20:39:57] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'find' (T_STRING)' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:20
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 20:39:59] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'find' (T_STRING)' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:20
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-10-28 20:41:52] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/app/controllers/MenuController.php:28
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

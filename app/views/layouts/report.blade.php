@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ocorrência</title>
+    <link rel="stylesheet" href="{{Request::root()}}/css/main.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="left-content">
+
+        <div style="height: 110px">
+            <img style="display: block; margin: auto; width: 200px; height: 100px" src="{{Request::root()}}/camminus/{{$company['logo']}}" >
+        </div>
+
+        <div class="ocorrencia">
+            <h4>Ocorrência: {{ $case_number }}</h4>
+        </div>
+
+        <form>
+            <fieldset>
+                <legend>Cliente</legend>
+                <div style="display: inline"><strong>Nome: </strong><input value="{{ $costumer['name'] }}" style="margin-left: 12px" size="40" type="text"></div>
+                <div style="display: inline; margin-left: 10px"><strong>CPF: </strong><input value="{{ $costumer['document'] }}" type="text"></div>
+                <div style="display: inline"><strong>Celular: </strong><input value="{{ $costumer['phone'] }}" type="text"></div>
+                <div style="display: inline; margin-left: 81px"><strong>Residencial: </strong><input value="{{ $costumer['phone_home'] }}" type="text"></div>
+            </fieldset>
+
+            <fieldset style="margin-top: 10px">
+                <legend>Descrição</legend>
+
+                <textarea style="border: none" rows="3" cols="82">{{ $descricao }}</textarea>
+
+            </fieldset>
+
+            <fieldset style="margin-top: 10px">
+                <legend>Equipamento</legend>
+                <div style="display: inline"><strong>Tipo: </strong><input value="{{ $equip_tipo }}" size="13" type="text"></div>
+                <div style="display: inline; margin-left: 10px"><strong>Modelo: </strong><input value="{{ $equip_modelo }}" size="14" type="text"></div>
+                <div style="display: inline; margin-left: 10px"><strong>Serial: </strong><input value="{{ $equip_serial }}" size="19" type="text"></div>
+                <div style="display: inline"><strong>Marca: </strong><input value="{{ $equip_marca }}" size="11" type="text"></div>
+                <div style="display: inline; margin-left: 10px"><strong>Acessórios: </strong><input value="{{ $equip_acess }}" size="43" type="text"></div>
+                <div style="display: inline"><strong>Observações: </strong><br><textarea style="border-style: dotted; padding: 5px" cols="81" rows="3">{{ $equip_obs }}</textarea></div>
+            </fieldset>
+
+            <fieldset style="margin-top: 10px; height: 100px">
+                <legend>Serviço(s)</legend>
+                <?php $total = 0; ?>
+                @foreach ($services as $service)
+                   <?php $preco_formated = "R$ " . number_format($service['preco'], 2, ',' ,'.'); ?>
+                   <li style="list-style-type: decimal">
+                        <div style="display: inline; margin-left: 5px;">{{ $service['name'] }}</div>
+                        <div style="display: inline; float: right">{{ $preco_formated }}</div>
+                   </li>
+                    <?php $total = $total + $service['preco']; ?>
+                @endforeach
+
+            </fieldset>
+            <div class="total">
+                <strong>Valor do(s) serviço(s):</strong>
+                <?php $total_formated = "R$ " . number_format($total, 2, ',' ,'.'); ?>
+                <strong style="margin-left: 10px">{{ $total_formated }}</strong>
+            </div>
+        </form>
+
+
+    </div>
+
+    <div class="right-content">
+        <article>
+            <h4>Termos do Serviço</h4>
+            <p>
+                a) Os serviços contarão com garantia de 3 (três) meses contanto que:
+                <span style="text-decoration: underline">(i.) Apresentem o mesmo problema que gerou a ocorrência inicial;</span>
+                (ii.) O Equipamento não esteja infectado por vírus; (iii.)
+                Os lacres não estejam rompidos; (iv.)
+                O equipamento apresente-se da mesma maneira que foi entregue ao cliente,
+                sem a instalação de quaisquer softwares adicionais. Não há garantia para
+                serviços de Limpeza e de Diagnóstico.
+            </p>
+            <p>
+                b) A Manutenção Express não se responsabiliza pela contratação e/ou instalação
+                de serviços de internet e/ou configuração de rede na residência do cliente.
+            </p>
+            <p>
+                c) A Manutenção Express não oferece suporte telefônico para os serviços realizados na loja.
+                Qualquer tipo de suporte ou garantia será realizado exclusivamente no balcão da empresa.
+            </p>
+            <p style="text-decoration: underline">
+                d) O cliente tem até 30 dias para retirar o equipamento. Após este período, será cobrada uma
+                taxa diária de armazenamento no valor de R$2,00 (dois reais). Passado o período 1 (um) ano,
+                o equipamento será descartado.
+            </p>
+            <p>
+                e) É responsabilidade do cliente fazer a cópia de segurança dos seus arquivos
+                pessoais ou solicitar o serviço adicional de "backup".
+            </p>
+            <p>
+                f) O cliente deverá demonstrar a posse de licenças válidas e regulares dos softwares
+                a serem instalados em seu(s) microcomputadore(s). O cliente desde já declara manter a
+                Manutenção Express livre de quaisquer ônus decorrentes do eventual uso de software não
+                legalizado, inclusive os ônus ligados ao pagamento de multas.
+            </p>
+            <p style="text-decoration: underline">
+                g) Caso, após realizado o diagnóstico, o cliente desista da execução de um serviço
+                de reparo físico, será cobrado o valor de R$35,00 (trinta e cinco reais) para desktops e
+                R$50,00 (cinquenta reais) para notebooks, netbooks e tablets, devido aos custos da utilização
+                de equipamentos, produtos e mão de obra técnica especializada durante o processo de diagnose.
+            </p>
+            <p>
+                h) O equipamento somente poderá ser retirado pelo signatário ou por quem tenha este documento em mãos.
+            </p>
+        </article>
+
+        <div class="confirmation">@yield('confirmation')</div>
+
+        <div style="margin-top: 20px">
+            <strong>
+                {{Carbon::parse($created_at)->formatLocalized($company["address_city"].', %d de %B de %Y');}}
+            </strong>
+        </div>
+
+        <div class="assinatura">
+            @yield('assinatura')
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    <?php
+        function mask($val, $mask)
+        {
+            $maskared = '';
+            $k = 0;
+
+            for ($i = 0; $i <= strlen($mask) - 1; $i++) {
+                if ($mask[$i] == '#') {
+                    if (isset($val[$k]))
+                        $maskared .= $val[$k++];
+                } else {
+                    if (isset($mask[$i]))
+                        $maskared .= $mask[$i];
+                }
+            }
+            return $maskared;
+        }
+    ?>
+
+    <div>
+        <small>{{ $company['address_street'] }},</small>
+        <small>{{ $company['address_number'] }}</small>
+        <small>{{ $company['address_complement']. " - " }}</small>
+        <small>{{ $company['address_neighborhood'] }}</small>
+        <small style="margin-left: 10px">
+            {{ "CNPJ: "  . mask($company['document'], '##.###.###/####-##') }}
+        </small>
+        <small style="margin-left: 10px">
+            {{ "Fone: "  . mask($company['phone'], '(##) ####-####') }}
+        </small>
+    </div>
+
+    <div>
+        <small>{{ "site: " . $company['site'] }} </small>
+        <small style="margin-left: 10px">{{ "e-mail: " . $company['email'] }}</small>
+    </div>
+
+</div>
+</body>
+</html>

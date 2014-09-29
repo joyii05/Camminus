@@ -1,0 +1,118 @@
+{
+    "type": "Ext.toolbar.Toolbar",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|padding": "",
+        "designer|userAlias": "headertoolbar",
+        "designer|userClassName": "HeaderToolbar",
+        "height": 60,
+        "ui": null,
+        "width": 582
+    },
+    "designerId": "8dbe77f3-b224-411f-9613-fdb3bc8c7daa",
+    "cn": [
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 50,
+                "layout|flex": null,
+                "padding": "",
+                "src": "resources/images/camminus.png",
+                "width": 244
+            },
+            "name": "MyImg",
+            "designerId": "40212990-170b-4e92-b083-f3e38b443b84"
+        },
+        {
+            "type": "Ext.toolbar.Fill",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null
+            },
+            "name": "MyFill",
+            "designerId": "364a3145-e919-430c-ae07-f787f82a617c"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disabled": true,
+                "layout|flex": null
+            },
+            "name": "translation1",
+            "designerId": "0b80cb55-fb04-4fa2-998b-5c86d988b8ec",
+            "masterInstanceId": "bcc666be-6872-4ac4-bda1-755c9983e908"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": null,
+                "designer|displayName": null,
+                "id": null,
+                "itemId": "logoutButton",
+                "layout|flex": null,
+                "text": "Sair"
+            },
+            "name": "MyButton",
+            "designerId": "59be1ca3-966a-468f-89d6-066d2a2a3b57"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "text": "FingerCompare"
+            },
+            "name": "MyButton2",
+            "designerId": "309746a9-0442-42dc-b5b5-be6537a4a2c0",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onButtonClick1",
+                        "implHandler": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "name": "onButtonClick1",
+                    "designerId": "27ff32fa-9949-40df-ae10-0ebe1a7af92c"
+                }
+            ]
+        }
+    ]
+}

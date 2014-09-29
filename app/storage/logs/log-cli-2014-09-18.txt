@@ -1,0 +1,10 @@
+[2014-09-18 18:35:39] local.ERROR: exception 'InvalidArgumentException' with message 'There are no commands defined in the "genarate" namespace.
+
+Did you mean this?
+    generate' in /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php:516
+Stack trace:
+#0 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(550): Symfony\Component\Console\Application->findNamespace('genarate')
+#1 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(190): Symfony\Component\Console\Application->find('genarate:contro...')
+#2 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#4 {main} [] []

@@ -1,0 +1,54 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Roles",
+        "stores": [
+            "Roles"
+        ],
+        "views": [
+            "roles.Grid"
+        ]
+    },
+    "designerId": "f995bd57-d30a-4b34-9c24-d1627beab457",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rolesGrid",
+                "selector": "rolesdrid",
+                "xtype": null
+            },
+            "designerId": "40ab9671-12ab-4988-83d9-7ab52010c6b1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rolesgrid",
+                "designer|targetType": "roles.Grid",
+                "fn": "onRolesGridpanelRender",
+                "implHandler": [
+                    "this.getRolesStore().load();",
+                    ""
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "designerId": "da3d5851-af26-417a-8d48-d115e68f8e40"
+        }
+    ]
+}

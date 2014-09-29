@@ -1,0 +1,69 @@
+{
+    "type": "Ext.button.Split",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "translation",
+        "designer|userClassName": "Translation",
+        "text": "Language"
+    },
+    "designerId": "bcc666be-6872-4ac4-bda1-755c9983e908",
+    "cn": [
+        {
+            "type": "Ext.menu.Menu",
+            "reference": {
+                "name": "menu",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 120
+            },
+            "designerId": "8cad9275-f3bd-477c-8e88-8ecd03e182c0",
+            "cn": [
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "pt_BR",
+                        "text": "Poruguês"
+                    },
+                    "designerId": "7c012534-c52f-4521-87c7-7a098eaeee08"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "en",
+                        "text": "English"
+                    },
+                    "designerId": "14aa5eb0-8e87-4a26-a6e9-9838732f1893"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "es",
+                        "text": "Español"
+                    },
+                    "designerId": "372bfc95-30b3-466b-a266-ea54825a4f97"
+                }
+            ]
+        }
+    ]
+}

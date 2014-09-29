@@ -1,0 +1,8 @@
+[2014-09-19 20:07:52] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in /var/www/camminus/app/routes.php:20
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-19 21:35:03] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'CreateCurrencyTable' not found' in /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php:301
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

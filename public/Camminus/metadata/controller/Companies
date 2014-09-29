@@ -1,0 +1,333 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Companies",
+        "models": [
+            "Company"
+        ],
+        "stores": [
+            "Companies"
+        ],
+        "views": [
+            "companies.Grid",
+            "companies.Form"
+        ]
+    },
+    "designerId": "85fbe0bd-d1b5-4ed2-93b7-3b5cbe3fd40d",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "companiesForm",
+                "selector": "companiesform"
+            },
+            "name": "companiesForm",
+            "designerId": "d40ee9f1-93fb-4c3f-a203-3f0ecbfe3e36"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "gridpanel",
+                "designer|targetType": "companies.Grid",
+                "fn": "onCompaniesGridpanelRender",
+                "implHandler": [
+                    "this.getCompaniesStore().load();",
+                    ""
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onCompaniesGridpanelRender",
+            "designerId": "cabbaeb1-bc76-4360-859c-7962645b4b46"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "companiesgrid button#new",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onAddNewCompanyClick",
+                "implHandler": [
+                    "var win    = this.getCompaniesForm();",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('companiesform');",
+                    "}",
+                    "",
+                    "win.adding = true;",
+                    "",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onAddNewCompanyClick",
+            "designerId": "31bd9a73-d1ac-4795-ab55-5b72caf9d1df"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#companiesButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onCompaniesButtonClick",
+                "implHandler": [
+                    "var win    = button.up('window'),",
+                    "    formPanel   = win.down('form'),",
+                    "    record = formPanel.getRecord(),",
+                    "    values = formPanel.getValues(),",
+                    "    store  = this.getCompaniesStore();",
+                    "",
+                    "",
+                    "",
+                    "if (formPanel.getForm().isValid()) {",
+                    "",
+                    "    formPanel.getForm().submit({",
+                    "        clientValidation: true,",
+                    "        url: '/companies',",
+                    "        success: function(form, action) {",
+                    "",
+                    "            var result = action.result;",
+                    "",
+                    "            console.log(result);",
+                    "",
+                    "            if (result.success) {",
+                    "",
+                    "                store.load();",
+                    "",
+                    "                win.close();",
+                    "",
+                    "            } else {",
+                    "               // Packt.util.Util.showErrorMsg(result.msg);",
+                    "            }",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            switch (action.failureType) {",
+                    "                case Ext.form.action.Action.CLIENT_INVALID:",
+                    "                    Ext.Msg.alert('Failure', 'Form fields may not be submitted with invalid values');",
+                    "                    break;",
+                    "                case Ext.form.action.Action.CONNECT_FAILURE:",
+                    "                    Ext.Msg.alert('Failure', 'Ajax communication failed');",
+                    "                    break;",
+                    "                case Ext.form.action.Action.SERVER_INVALID:",
+                    "                    Ext.Msg.alert('Failure', action.result.msg);",
+                    "            }",
+                    "        }",
+                    "    });",
+                    "}",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onCompaniesButtonClick",
+            "designerId": "576287b7-95b9-4035-ac21-e93d7045c78a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#editCompany",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onEditButtonClick",
+                "implHandler": [
+                    "var win = this.getCompaniesForm(),",
+                    "    grid = button.up('companiesgrid'),",
+                    "    record = grid.getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('companiesform');",
+                    "}",
+                    "",
+                    "",
+                    "if (record[0].get('logo')) {",
+                    "",
+                    "    var img = win.down('#logoImg');",
+                    "    img.setSrc(record[0].get('logo'));",
+                    "}",
+                    "",
+                    "",
+                    "win.setTitle(record[0].get('company_name'));",
+                    "win.down('form').loadRecord(record[0]);",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onEditButtonClick",
+            "designerId": "151d3a00-392e-49a9-a930-69ff18cace1c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "companiesgrid",
+                "designer|targetType": "companies.Grid",
+                "fn": "onCompaniesGridpanelItemDblClick",
+                "implHandler": [
+                    "var win = this.getCompaniesForm();",
+                    "",
+                    "",
+                    "if(!win){",
+                    "    win = Ext.widget('companiesform');",
+                    "}",
+                    "",
+                    "",
+                    "if (record.get('logo')) {",
+                    "",
+                    "    var img = win.down('#logoImg');",
+                    "    img.setSrc(record.get('logo'));",
+                    "}",
+                    "",
+                    "",
+                    "win.setTitle(record.get('company_name'));",
+                    "win.down('form').loadRecord(record);",
+                    "win.show();"
+                ],
+                "name": "itemdblclick",
+                "scope": "me"
+            },
+            "name": "onCompaniesGridpanelItemDblClick",
+            "designerId": "b08f61ce-0152-4a55-a175-f8900dd95230"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "companiesGrid",
+                "selector": "#companiesGrid"
+            },
+            "name": "companiesGrid",
+            "designerId": "72baaf2d-86dc-4080-aa22-9ce5903330e3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#refreshcompanies",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onRefreshButtonClick",
+                "implHandler": [
+                    "this.getCompaniesStore().load();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onRefreshButtonClick",
+            "designerId": "06ebac4b-5dc3-4d15-aa7c-18e816b17815"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "logo",
+                "selector": "#logo"
+            },
+            "name": "logo",
+            "designerId": "f6607f4e-8b80-45c1-911c-a8adb4bb2301"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#logo",
+                "designer|targetType": "Ext.form.field.File",
+                "fn": "onFilefieldChange",
+                "implHandler": [
+                    "var file = filefield.fileInputEl.dom.files[0],",
+                    "    picture = this.getLogoImg();",
+                    "",
+                    "",
+                    "if (typeof FileReader !== \"undefined\" && (/image/i).test(file.type)) {",
+                    "",
+                    "    var reader = new FileReader();",
+                    "",
+                    "    reader.onload = function(e){",
+                    "        picture.setSrc(e.target.result);",
+                    "    };",
+                    "",
+                    "    reader.readAsDataURL(file);",
+                    "",
+                    "}",
+                    "    else if (!(/image/i).test(file.type)){",
+                    "",
+                    "        Ext.Msg.alert('Warning', 'You can only upload image files!');",
+                    "        filefield.reset();",
+                    "",
+                    "    }",
+                    ""
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "name": "onFilefieldChange",
+            "designerId": "a083d3ae-869c-4af0-af26-ff2ba4345ccd"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "logoImg",
+                "selector": "#logoImg"
+            },
+            "name": "logoImg",
+            "designerId": "12c15a9f-ebec-4b7f-9d57-b9be0c283a1c"
+        }
+    ]
+}

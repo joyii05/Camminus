@@ -1,0 +1,126 @@
+[2014-09-16 15:23:46] local.ERROR: exception 'InvalidArgumentException' with message 'Command "optmize" is not defined.
+
+Did you mean this?
+    optimize' in /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php:564
+Stack trace:
+#0 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(190): Symfony\Component\Console\Application->find('optmize')
+#1 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#3 {main} [] []
+[2014-09-16 16:45:54] local.ERROR: exception 'AuraIsHere\LaravelMultiTenant\Exceptions\TenantIdNotSetException' in /var/www/camminus/vendor/aura-is-here/laravel-multi-tenant/src/AuraIsHere/LaravelMultiTenant/TenantScope.php:24
+Stack trace:
+#0 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1743): AuraIsHere\LaravelMultiTenant\TenantScope->apply(Object(Illuminate\Database\Eloquent\Builder), Object(Service))
+#1 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1707): Illuminate\Database\Eloquent\Model->applyGlobalScopes(Object(Illuminate\Database\Eloquent\Builder))
+#2 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1730): Illuminate\Database\Eloquent\Model->newQuery()
+#3 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1372): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#4 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(526): Illuminate\Database\Eloquent\Model->save()
+#5 /var/www/camminus/app/database/seeds/ServicesTableSeeder.php(20): Illuminate\Database\Eloquent\Model::create(Array)
+#6 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(37): ServicesTableSeeder->run()
+#7 /var/www/camminus/app/database/seeds/DatabaseSeeder.php(21): Illuminate\Database\Seeder->call('ServicesTableSe...')
+#8 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Console/SeedCommand.php(57): DatabaseSeeder->run()
+#9 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(112): Illuminate\Database\Console\SeedCommand->fire()
+#10 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(889): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(193): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#16 {main} [] []
+[2014-09-16 16:47:02] local.ERROR: exception 'AuraIsHere\LaravelMultiTenant\Exceptions\TenantIdNotSetException' in /var/www/camminus/vendor/aura-is-here/laravel-multi-tenant/src/AuraIsHere/LaravelMultiTenant/TenantScope.php:24
+Stack trace:
+#0 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1743): AuraIsHere\LaravelMultiTenant\TenantScope->apply(Object(Illuminate\Database\Eloquent\Builder), Object(Service))
+#1 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1707): Illuminate\Database\Eloquent\Model->applyGlobalScopes(Object(Illuminate\Database\Eloquent\Builder))
+#2 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1730): Illuminate\Database\Eloquent\Model->newQuery()
+#3 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1372): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#4 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(526): Illuminate\Database\Eloquent\Model->save()
+#5 /var/www/camminus/app/database/seeds/ServicesTableSeeder.php(20): Illuminate\Database\Eloquent\Model::create(Array)
+#6 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(37): ServicesTableSeeder->run()
+#7 /var/www/camminus/app/database/seeds/DatabaseSeeder.php(21): Illuminate\Database\Seeder->call('ServicesTableSe...')
+#8 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Console/SeedCommand.php(57): DatabaseSeeder->run()
+#9 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(112): Illuminate\Database\Console\SeedCommand->fire()
+#10 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(889): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(193): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#16 {main} [] []
+[2014-09-16 16:49:33] local.ERROR: exception 'AuraIsHere\LaravelMultiTenant\Exceptions\TenantIdNotSetException' in /var/www/camminus/vendor/aura-is-here/laravel-multi-tenant/src/AuraIsHere/LaravelMultiTenant/TenantScope.php:24
+Stack trace:
+#0 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1743): AuraIsHere\LaravelMultiTenant\TenantScope->apply(Object(Illuminate\Database\Eloquent\Builder), Object(Service))
+#1 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1707): Illuminate\Database\Eloquent\Model->applyGlobalScopes(Object(Illuminate\Database\Eloquent\Builder))
+#2 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1730): Illuminate\Database\Eloquent\Model->newQuery()
+#3 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1372): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#4 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(526): Illuminate\Database\Eloquent\Model->save()
+#5 /var/www/camminus/app/database/seeds/ServicesTableSeeder.php(20): Illuminate\Database\Eloquent\Model::create(Array)
+#6 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(37): ServicesTableSeeder->run()
+#7 /var/www/camminus/app/database/seeds/DatabaseSeeder.php(21): Illuminate\Database\Seeder->call('ServicesTableSe...')
+#8 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Console/SeedCommand.php(57): DatabaseSeeder->run()
+#9 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(112): Illuminate\Database\Console\SeedCommand->fire()
+#10 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(889): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(193): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#16 {main} [] []
+[2014-09-16 16:52:05] local.ERROR: exception 'AuraIsHere\LaravelMultiTenant\Exceptions\TenantIdNotSetException' in /var/www/camminus/vendor/aura-is-here/laravel-multi-tenant/src/AuraIsHere/LaravelMultiTenant/TenantScope.php:24
+Stack trace:
+#0 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1743): AuraIsHere\LaravelMultiTenant\TenantScope->apply(Object(Illuminate\Database\Eloquent\Builder), Object(Service))
+#1 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1707): Illuminate\Database\Eloquent\Model->applyGlobalScopes(Object(Illuminate\Database\Eloquent\Builder))
+#2 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1730): Illuminate\Database\Eloquent\Model->newQuery()
+#3 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1372): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#4 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(526): Illuminate\Database\Eloquent\Model->save()
+#5 /var/www/camminus/app/database/seeds/ServicesTableSeeder.php(20): Illuminate\Database\Eloquent\Model::create(Array)
+#6 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(37): ServicesTableSeeder->run()
+#7 /var/www/camminus/app/database/seeds/DatabaseSeeder.php(21): Illuminate\Database\Seeder->call('ServicesTableSe...')
+#8 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Console/SeedCommand.php(57): DatabaseSeeder->run()
+#9 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(112): Illuminate\Database\Console\SeedCommand->fire()
+#10 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(889): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(193): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#16 {main} [] []
+[2014-09-16 17:00:27] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '->' (T_OBJECT_OPERATOR)' in /var/www/camminus/app/database/seeds/ServicesTableSeeder.php:14
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-16 17:03:13] local.ERROR: exception 'AuraIsHere\LaravelMultiTenant\Exceptions\TenantIdNotSetException' in /var/www/camminus/vendor/aura-is-here/laravel-multi-tenant/src/AuraIsHere/LaravelMultiTenant/TenantScope.php:24
+Stack trace:
+#0 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1743): AuraIsHere\LaravelMultiTenant\TenantScope->apply(Object(Illuminate\Database\Eloquent\Builder), Object(Service))
+#1 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1707): Illuminate\Database\Eloquent\Model->applyGlobalScopes(Object(Illuminate\Database\Eloquent\Builder))
+#2 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1718): Illuminate\Database\Eloquent\Model->newQuery()
+#3 /var/www/camminus/vendor/aura-is-here/laravel-multi-tenant/src/AuraIsHere/LaravelMultiTenant/ScopedByTenant.php(35): Illuminate\Database\Eloquent\Model->newQueryWithoutScope(Object(AuraIsHere\LaravelMultiTenant\TenantScope))
+#4 /var/www/camminus/app/database/seeds/ServicesTableSeeder.php(14): Service::allTenants()
+#5 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(37): ServicesTableSeeder->run()
+#6 /var/www/camminus/app/database/seeds/DatabaseSeeder.php(21): Illuminate\Database\Seeder->call('ServicesTableSe...')
+#7 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Console/SeedCommand.php(57): DatabaseSeeder->run()
+#8 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(112): Illuminate\Database\Console\SeedCommand->fire()
+#9 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(889): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(193): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#15 {main} [] []
+[2014-09-16 17:03:37] local.ERROR: exception 'AuraIsHere\LaravelMultiTenant\Exceptions\TenantIdNotSetException' in /var/www/camminus/vendor/aura-is-here/laravel-multi-tenant/src/AuraIsHere/LaravelMultiTenant/TenantScope.php:24
+Stack trace:
+#0 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1743): AuraIsHere\LaravelMultiTenant\TenantScope->apply(Object(Illuminate\Database\Eloquent\Builder), Object(Service))
+#1 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1707): Illuminate\Database\Eloquent\Model->applyGlobalScopes(Object(Illuminate\Database\Eloquent\Builder))
+#2 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1730): Illuminate\Database\Eloquent\Model->newQuery()
+#3 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1372): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#4 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(526): Illuminate\Database\Eloquent\Model->save()
+#5 /var/www/camminus/app/database/seeds/ServicesTableSeeder.php(20): Illuminate\Database\Eloquent\Model::create(Array)
+#6 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(37): ServicesTableSeeder->run()
+#7 /var/www/camminus/app/database/seeds/DatabaseSeeder.php(21): Illuminate\Database\Seeder->call('ServicesTableSe...')
+#8 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Console/SeedCommand.php(57): DatabaseSeeder->run()
+#9 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(112): Illuminate\Database\Console\SeedCommand->fire()
+#10 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(889): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(193): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#16 {main} [] []

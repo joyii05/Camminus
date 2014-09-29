@@ -1,0 +1,9 @@
+[2013-08-16 21:22:51] log.ERROR: exception 'InvalidArgumentException' with message 'Command "routs" is not defined.
+
+Did you mean this?
+    routes' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/symfony/console/Symfony/Component/Console/Application.php:617
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/symfony/console/Symfony/Component/Console/Application.php(188): Symfony\Component\Console\Application->find('routs')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/artisan(59): Symfony\Component\Console\Application->run()
+#3 {main} [] []

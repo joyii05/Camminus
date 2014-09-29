@@ -1,0 +1,36 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "Services",
+        "leadingBufferZone": 300,
+        "model": "Service",
+        "pageSize": null,
+        "remoteSort": true,
+        "storeId": "Services"
+    },
+    "designerId": "fdd3c975-8c8d-44bc-9f28-6bf29dbde4f7",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "nameSorter",
+                "direction": null,
+                "property": "name",
+                "root": null
+            },
+            "name": "MySorter3",
+            "designerId": "5e67e998-e2d8-4e61-8f58-c2d3cfb738a3"
+        }
+    ]
+}

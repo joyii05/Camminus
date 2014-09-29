@@ -1,0 +1,68 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menu.Root",
+        "uses": [
+            "Camminus.model.menu.Item"
+        ]
+    },
+    "designerId": "9d27e0a4-c397-4ac2-9f7d-bb4d2a593b7b",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "designerId": "20dc0b38-a5e2-43fa-a5e2-d432031f62f1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "designerId": "afaf1896-0e48-41a8-a389-b2b9129ca93f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "iconCls"
+            },
+            "designerId": "be8b5671-441d-44ba-86d6-d832223ee9c7"
+        },
+        {
+            "type": "Ext.data.association.HasMany",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "hasManymenu.Item",
+                "foreignKey": "parent_id",
+                "model": "menu.Item",
+                "name": "items"
+            },
+            "designerId": "c0b5e299-aff2-43c8-90b8-ddfc83fbdf4f"
+        }
+    ]
+}

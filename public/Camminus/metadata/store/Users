@@ -1,0 +1,70 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "autoSync": true,
+        "designer|userAlias": "users",
+        "designer|userClassName": "Users",
+        "leadingBufferZone": 300,
+        "model": "User",
+        "pageSize": 30,
+        "remoteSort": true,
+        "storeId": "Users"
+    },
+    "designerId": "4f23bd78-3d2a-44bb-b1b6-7d61f921c33c",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "nameSorter",
+                "direction": null,
+                "property": "name",
+                "root": null
+            },
+            "name": "MySorter1",
+            "designerId": "3691ba2d-9efa-473e-9ed2-509af24d6fda"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreWrite",
+                "implHandler": [
+                    "",
+                    "var record = operation.getRecords()[0],",
+                    "    name = Ext.String.capitalize(operation.action),",
+                    "    verb;",
+                    "",
+                    "",
+                    "if (name == 'Destroy') {",
+                    "    record = operation.records[0];",
+                    "    verb = 'Destroyed';",
+                    "} else {",
+                    "    verb = name + 'd';",
+                    "}",
+                    "console.log(name, Ext.String.format(\"{0} user: {1}\", verb, record.getId()));",
+                    "",
+                    ""
+                ],
+                "name": "write",
+                "scope": "me"
+            },
+            "name": "onStoreWrite",
+            "designerId": "d7752765-e957-487c-93f9-6a330be850d5"
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+[2013-11-13 20:07:52] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:07:55] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:09:47] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:10:36] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:11:12] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:11:18] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:12:49] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:13:55] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:18:24] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:18:36] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:18:57] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:19:04] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:20:55] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-11-13 20:21:01] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []

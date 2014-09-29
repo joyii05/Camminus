@@ -1,0 +1,17 @@
+[2014-02-01 21:25:39] production.ERROR: exception 'InvalidArgumentException' with message 'Command "migrate:seed" is not defined.
+
+Did you mean one of these?
+    generate:seed
+    db:seed
+    migrate:make
+    migrate:reset
+    migrate:refresh
+    migrate:rollback
+    migrate
+    migrate:install
+    migrate:publish' in /Volumes/Genes/Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/symfony/console/Symfony/Component/Console/Application.php:562
+Stack trace:
+#0 /Volumes/Genes/Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(188): Symfony\Component\Console\Application->find('migrate:seed')
+#1 /Volumes/Genes/Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /Volumes/Genes/Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Camminus/artisan(59): Symfony\Component\Console\Application->run()
+#3 {main} [] []

@@ -1,0 +1,135 @@
+[2013-08-16 07:54:28] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'echo' (T_ECHO)' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/laravel/app/routes.php:16
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-08-16 20:41:59] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manu.users' doesn't exist' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:271
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(271): PDO->prepare('select * from `...')
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(520): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(16): Illuminate\Database\Query\Builder->get()
+#7 [internal function]: {closure}()
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#13 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#14 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manu.users' doesn't exist (SQL: select * from `users`) (Bindings: array (
+))' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Connection.php(276): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(988): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(978): Illuminate\Database\Query\Builder->runSelect()
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(965): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php(16): Illuminate\Database\Query\Builder->get()
+#6 [internal function]: {closure}()
+#7 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#8 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#9 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#10 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []
+[2013-08-16 20:59:27] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Eloquent\Collection::to_array()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:16
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-08-16 20:59:32] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Eloquent\Collection::to_array()' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/app/routes.php:16
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-08-16 21:19:10] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-08-16 21:36:00] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1439
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\MethodNotAllowedException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-08-16 21:36:29] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1439
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\MethodNotAllowedException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-08-16 21:36:38] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1439
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\MethodNotAllowedException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-08-16 21:36:52] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1439
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\MethodNotAllowedException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-08-16 21:37:21] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1439
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\MethodNotAllowedException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-08-16 21:37:48] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-08-16 21:37:57] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-08-16 21:40:07] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1439
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\MethodNotAllowedException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-08-16 21:40:52] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1439
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\MethodNotAllowedException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2013-08-16 21:41:12] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1439
+Stack trace:
+#0 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\MethodNotAllowedException))
+#1 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(530): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(506): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /Users/genesluna/Dropbox/GLuna/WebServer/htdocs/sencha-architect/Manu/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []

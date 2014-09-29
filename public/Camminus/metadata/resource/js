@@ -1,0 +1,14 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js",
+        "url": "translations/locale.js",
+        "x-compile": true
+    },
+    "designerId": "96ff7f10-7e9e-4268-aa6c-6aa876d1116c"
+}

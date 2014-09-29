@@ -1,0 +1,9 @@
+<?php $__env->startSection('confirmation'); ?>
+    <strong>Concordo com os termos e autorizo a execução do(s) serviço(s),</strong>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('assinatura'); ?>
+    <span><?php echo $costumer['name']; ?></span><br>
+    <span><?php echo $costumer['document']; ?></span>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.report', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

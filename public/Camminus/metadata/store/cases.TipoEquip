@@ -1,0 +1,41 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {\"name\":\"Notebook\"},",
+            "    {\"name\":\"Desktop\"},",
+            "    {\"name\":\"Tablet\"},",
+            "    {\"name\":\"Smartphone\"},",
+            "    {\"name\":\"Roteador\"},",
+            "    {\"name\":\"Pendrive\"},",
+            "    {\"name\":\"GPS\"},",
+            "    {\"name\":\"HD\"},",
+            "]",
+            "        "
+        ],
+        "designer|userClassName": "cases.TipoEquip",
+        "storeId": "cases.TipoEquip"
+    },
+    "designerId": "ce585e62-9dc9-4ea5-9c99-964a4a72137f",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField55",
+            "designerId": "57b65dd8-58b2-499b-a2cc-95b420ed3812"
+        }
+    ]
+}

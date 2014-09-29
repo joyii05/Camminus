@@ -1,0 +1,22 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": true,
+        "collapseDirection": "left",
+        "collapsible": true,
+        "designer|userAlias": "mainmenu",
+        "designer|userClassName": "menu.Accordion",
+        "layout": "accordion",
+        "minHeight": null,
+        "minWidth": 240,
+        "resizeHandles": "e",
+        "title": "Menu",
+        "width": 240
+    },
+    "designerId": "1e258cb2-9f7d-4ec2-b9d7-e1a150e6dd92"
+}

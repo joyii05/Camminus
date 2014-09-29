@@ -1,0 +1,36 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {\"name\":\"Normal\"},",
+            "    {\"name\":\"Alta\"},",
+            "    {\"name\":\"Baixa\"}",
+            "]",
+            "        "
+        ],
+        "designer|userClassName": "cases.Prioridade",
+        "storeId": "cases.Prioridade"
+    },
+    "designerId": "856717a5-8925-4751-b124-af722a0c7c6e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField48",
+            "designerId": "a360b6d5-fe51-4abe-a664-6c6abd12fcf9"
+        }
+    ]
+}

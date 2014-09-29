@@ -1,0 +1,434 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyBorder": true,
+        "designer|userAlias": "rolesgrid",
+        "designer|userClassName": "roles.Grid",
+        "header": false,
+        "height": 315,
+        "itemId": null,
+        "store": "Roles",
+        "title": null,
+        "width": 1233
+    },
+    "designerId": "b6329086-9f80-4137-a0c6-f31a89d9546b",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "GridTopToolbar",
+                "dock": "top",
+                "itemId": "toptoolBar",
+                "ui": "footer"
+            },
+            "name": "MyToolbar11",
+            "designerId": "f6b4798a-45e6-4564-b801-485b4b6dd9e9",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "name",
+                        "emptyText": null,
+                        "enableKeyEvents": true,
+                        "fieldLabel": "Label",
+                        "hideLabel": true,
+                        "hideTrigger": true,
+                        "itemId": "searchrolesgrid",
+                        "layout|flex": null,
+                        "listConfig": [
+                            "{",
+                            "    loadingText: 'Buscando...',",
+                            "    emptyText: 'Nenhum resultado...'",
+                            "}"
+                        ],
+                        "minChars": 1,
+                        "queryMode": null,
+                        "store": "Roles",
+                        "triggerCls": "x-form-clear-trigger",
+                        "typeAhead": true,
+                        "width": 270
+                    },
+                    "name": "MyComboBox13",
+                    "configAlternates": {
+                        "listConfig": "object"
+                    },
+                    "designerId": "959c7b75-c416-4195-9c07-ac3f50b3c998",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "listConfig",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTriggerClick",
+                                "implHandler": [
+                                    "this.clearValue();",
+                                    "this.getStore().load();",
+                                    "this.hideTrigger = true;",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "onTriggerClick",
+                            "designerId": "6e724b47-6034-4782-a61a-4d89c193c580"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSearchgridKeyup",
+                                "implHandler": [
+                                    "if (textfield.rawValue === ''){",
+                                    "    textfield.hideTrigger = true;",
+                                    "}",
+                                    "else{",
+                                    "    textfield.hideTrigger = false;",
+                                    "}"
+                                ],
+                                "name": "keyup",
+                                "scope": "me"
+                            },
+                            "name": "onSearchgridKeyup",
+                            "designerId": "8bd45124-0d46-43e4-81f9-dbe13ea2c7d7"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSearchgridSelect",
+                                "implHandler": [
+                                    "var store = this.getStore();",
+                                    "",
+                                    "store.load({",
+                                    "  params: {query: records[0].data.name}",
+                                    "});",
+                                    ""
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "name": "onSearchgridSelect",
+                            "designerId": "e177b4ad-0897-4869-bb6a-b531b7fb68cd"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 16,
+                        "imgCls": "search",
+                        "layout|flex": null,
+                        "width": 16
+                    },
+                    "name": "MyImg8",
+                    "designerId": "064ba94f-7fd7-422b-92a3-0ae33023b9fd"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "HeaderFill",
+                        "layout|flex": null
+                    },
+                    "name": "MyFill9",
+                    "designerId": "69b7d8c0-757c-49cb-97de-06d25bd84391"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": "right",
+                        "iconCls": "add-button",
+                        "itemId": "new",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton38",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "bf2bb74c-9e07-4db4-a048-c1cba9fe8a16",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processNew",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_new;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processNew",
+                            "designerId": "c427a40d-2d23-4c52-9c1c-49e00502a816"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "iconAlign": "right",
+                        "iconCls": "edit-button",
+                        "itemId": "edit",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton39",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "570b57d0-78af-46c3-8a3e-612df5b185fb",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processEdit",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_edit;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processEdit",
+                            "designerId": "70e0f1fb-7a9d-44db-908c-88b2eb6da7bd"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "iconAlign": "right",
+                        "iconCls": "delete-button",
+                        "itemId": "deleteRole",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton40",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "af4246a4-1d6d-4e41-9add-388feaf8e81e",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processDeleteRole",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_delete;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processDeleteRole",
+                            "designerId": "1cb4c9ab-0919-48e2-aa03-f3324eac0db3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": "right",
+                        "iconCls": "refresh-button",
+                        "itemId": "refresh",
+                        "layout|flex": null,
+                        "text": ""
+                    },
+                    "name": "MyButton41",
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "263d1878-7902-4824-8021-7fe155e20a62",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processRefresh",
+                                "implHandler": [
+                                    "config.tooltip = translations.button_refresh;",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processRefresh",
+                            "designerId": "1306aad1-e9a5-4761-8939-47eb3de72ee3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "GridView",
+                "width": null
+            },
+            "name": "MyGridView5",
+            "designerId": "9bd577e3-c0b3-4349-9bcf-b9c9d2edba2d"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "GridToolbar",
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "Roles",
+                "ui": null,
+                "width": 360
+            },
+            "name": "MyPagingToolbar4",
+            "designerId": "e2138b3a-8ee8-44f6-ba09-b73b2fd90859"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridpanelSelect",
+                "implHandler": [
+                    "this.down('button#edit').setDisabled(false);",
+                    "this.down('button#deleteRole').setDisabled(false);",
+                    "",
+                    ""
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "name": "onGridpanelSelect",
+            "designerId": "dc2de8f3-8645-4d5d-a361-80a811eb608f"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "name",
+                "flex": 1,
+                "text": "Nome"
+            },
+            "name": "MyColumn22",
+            "designerId": "527463c4-5424-4550-8b6a-53fa3ac52dbd"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "description",
+                "flex": 2,
+                "text": "Descrição"
+            },
+            "name": "MyColumn23",
+            "designerId": "53e1d664-c856-47ff-8a19-7007db01ff70"
+        }
+    ]
+}

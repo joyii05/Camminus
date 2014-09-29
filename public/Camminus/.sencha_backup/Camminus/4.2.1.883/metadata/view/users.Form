@@ -1,0 +1,538 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoScroll": true,
+        "defaultFocus": "fullName",
+        "designer|userAlias": "userform",
+        "designer|userClassName": "users.Form",
+        "height": 445,
+        "layout": "fit",
+        "minHeight": 431,
+        "modal": true,
+        "title": "Editar Usuário",
+        "width": 523
+    },
+    "designerId": "98e8a108-65f0-4c0e-b3df-474cd00cf0cf",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|padding": null,
+                "designer|displayName": "Toolbar",
+                "dock": "bottom",
+                "ui": "footer"
+            },
+            "designerId": "fbc2771b-0853-46dc-a7eb-ceedc0415a01",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "designerId": "913e6780-fac9-4b52-b765-a49b61fbc448"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "reset",
+                        "id": "userCancelButton",
+                        "layout|flex": null,
+                        "text": "Cancelar"
+                    },
+                    "designerId": "c2bcbedf-6d1f-4a9b-b1ce-659718b561ef",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "this.up('window').close();",
+                                    ""
+                                ]
+                            },
+                            "designerId": "9b86fa85-c47f-4137-8106-df67078310de"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "userButton",
+                        "layout|flex": null,
+                        "text": "Atualizar"
+                    },
+                    "designerId": "e30f3151-c0ff-47d8-9fdf-e4584d44483c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "designer|displayName": "Form",
+                "designer|snapToGrid": 10,
+                "height": 392,
+                "layout": "absolute",
+                "title": null
+            },
+            "designerId": "ac7898f9-67e2-4303-9e6c-3a8818e14558",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "dock": null,
+                        "height": 350,
+                        "layout|x": 10,
+                        "layout|y": 10,
+                        "title": "Informações do usuário",
+                        "width": 308
+                    },
+                    "designerId": "6322da14-bcca-4ff5-9279-c7f9a862141e",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "allowOnlyWhitespace": false,
+                                "fieldLabel": "Nome",
+                                "id": "",
+                                "inputId": null,
+                                "itemId": "fullName",
+                                "labelAlign": "top",
+                                "minLength": 4,
+                                "msgTarget": null,
+                                "name": "name",
+                                "width": 285
+                            },
+                            "designerId": "cd0309cc-7dc6-40aa-9c66-e0f092fa989f",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                                        ]
+                                    },
+                                    "designerId": "65dee34c-0021-4a94-ad81-4ccea4899ecf"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "allowOnlyWhitespace": false,
+                                "fieldLabel": "Username",
+                                "id": null,
+                                "labelAlign": "top",
+                                "minLength": 4,
+                                "name": "user_name",
+                                "width": 285
+                            },
+                            "designerId": "d6cf0c94-cefb-411f-bb4a-0aeeb8c1adb1",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                        ]
+                                    },
+                                    "designerId": "cc8adf04-768b-40ee-8ec1-2962c029bf75"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "allowOnlyWhitespace": false,
+                                "fieldLabel": "Email",
+                                "id": null,
+                                "labelAlign": "top",
+                                "name": "email",
+                                "vtype": "email",
+                                "width": 285
+                            },
+                            "designerId": "ff620a4d-5617-417a-b3b6-d74e7a4c1855",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                        ]
+                                    },
+                                    "designerId": "218bea1a-051e-4e68-a69d-71ff81fe0885"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "allowOnlyWhitespace": false,
+                                "disabled": true,
+                                "fieldLabel": "Senha",
+                                "id": null,
+                                "inputType": "password",
+                                "itemId": "password",
+                                "labelAlign": "top",
+                                "minLength": 8,
+                                "name": "password",
+                                "width": 285
+                            },
+                            "designerId": "3b505516-67dc-4a5f-96db-01bafa8a3e27",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                        ]
+                                    },
+                                    "designerId": "2e7ca5fc-1a24-42c5-ab47-d90565701a33"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "allowOnlyWhitespace": false,
+                                "disabled": true,
+                                "fieldLabel": "Confirmação de senha",
+                                "id": null,
+                                "inputType": "password",
+                                "itemId": "passwordcheck",
+                                "labelAlign": "top",
+                                "minLength": 8,
+                                "name": "passwordCheck",
+                                "width": 285
+                            },
+                            "designerId": "dd9604b3-a1fe-44d3-978b-9534c6a86e42",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value"
+                                        ],
+                                        "fn": "validator",
+                                        "implHandler": [
+                                            "var password = this.previousSibling('[name=password]');",
+                                            "return (value === password.getValue()) ? true : 'Senha não confere.';"
+                                        ]
+                                    },
+                                    "designerId": "7e66cb40-b7e6-425f-a95b-093421ace39b"
+                                },
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                        ]
+                                    },
+                                    "designerId": "02219243-6fc6-43b3-a2d5-e38df1c65211"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.File",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "buttonText": "Procurar...",
+                                "fieldLabel": "Foto",
+                                "itemId": "profileimage",
+                                "labelAlign": "top",
+                                "layout|anchor": "100%",
+                                "maxWidth": 285,
+                                "name": "profile_image",
+                                "width": 285
+                            },
+                            "designerId": "fcd82b1f-1d7e-4513-930c-bed01e055e93"
+                        },
+                        {
+                            "type": "Ext.form.field.Hidden",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Label",
+                                "layout|anchor": "100%",
+                                "name": "id"
+                            },
+                            "designerId": "1522a5de-fd90-46fc-b967-f772a01ab56d"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "<font color=\"gray\">(150 x 150px - Máximo: 2MB)</font>",
+                                "text": null
+                            },
+                            "designerId": "cbf44c81-f13a-4d7c-8efc-6d960f44a96f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|snapToGrid": 10,
+                        "height": 180,
+                        "layout": "absolute",
+                        "layout|x": 330,
+                        "layout|y": 10,
+                        "title": "Foto",
+                        "width": 170
+                    },
+                    "designerId": "ca4f379a-99c5-4122-a363-d09b53d2f9c1",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 150,
+                                "imgCls": null,
+                                "src": "resources/icons/no_image.png",
+                                "width": 150
+                            },
+                            "designerId": "e67584a7-e788-405e-8733-57a9bfd71ef6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 160,
+                        "layout|x": 330,
+                        "layout|y": 200,
+                        "title": "Segurança",
+                        "width": 170
+                    },
+                    "designerId": "e5c242ce-2129-4809-b425-e99406f1d993",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Usuário ativo",
+                                "fieldLabel": "",
+                                "inputValue": "true",
+                                "labelAlign": "top",
+                                "layout|anchor": "100%",
+                                "name": "is_active",
+                                "uncheckedValue": "false"
+                            },
+                            "designerId": "2b3306e8-5b24-4972-8916-55b43cf9c631"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "designer|displayName": null,
+                                "displayField": "name",
+                                "fieldLabel": "Grupo",
+                                "forceSelection": true,
+                                "labelAlign": "top",
+                                "labelWidth": 50,
+                                "maxWidth": null,
+                                "minChars": null,
+                                "name": "role_id",
+                                "queryMode": "local",
+                                "store": "Roles",
+                                "valueField": "id",
+                                "width": 148
+                            },
+                            "designerId": "22f7e397-cb11-467f-a72b-1bd343fa5863",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "afterLabelTextTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "afterLabelTextTpl",
+                                        "implHandler": [
+                                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Obrigatório\">*</span>"
+                                        ]
+                                    },
+                                    "designerId": "e04e0f9c-6080-4921-84eb-f33c65e86687"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "name",
+                                "fieldLabel": "Responde à",
+                                "labelAlign": "top",
+                                "labelWidth": 50,
+                                "layout|anchor": "100%",
+                                "name": "reports_to",
+                                "queryMode": "local",
+                                "store": "Users",
+                                "valueField": "id",
+                                "width": null
+                            },
+                            "designerId": "c838c8b2-68e4-46c8-9206-67acec52c5b7"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {\"status\":\"Em Andamento\"},",
+            "    {\"status\":\"Aguardando Autorização\"},",
+            "    {\"status\":\"Aguardando Peças\"},",
+            "    {\"status\":\"Aguardando Retirada\"},",
+            "    {\"status\":\"Cancelada\"},",
+            "    {\"status\":\"Fechada\"}",
+            "]",
+            "        "
+        ],
+        "designer|userClassName": "cases.Status",
+        "storeId": "cases.Status"
+    },
+    "designerId": "edcee179-ef6b-4831-a232-23cea9ea6f57",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status"
+            },
+            "name": "MyField50",
+            "designerId": "57a4e9eb-c49d-4949-80d5-b00511f482e9"
+        }
+    ]
+}

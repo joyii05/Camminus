@@ -1,0 +1,23 @@
+[2014-09-11 14:45:35] local.ERROR: exception 'ErrorException' with message 'include(/var/www/camminus/app/database/migrations/2014_07_20_224152_create_devices_table.php): failed to open stream: No such file or directory' in /var/www/camminus/vendor/composer/ClassLoader.php:382
+Stack trace:
+#0 /var/www/camminus/vendor/composer/ClassLoader.php(382): Illuminate\Exception\Handler->handleError(2, 'include(/var/ww...', '/var/www/cammin...', 382, Array)
+#1 /var/www/camminus/vendor/composer/ClassLoader.php(382): Composer\Autoload\includeFile()
+#2 /var/www/camminus/vendor/composer/ClassLoader.php(274): Composer\Autoload\includeFile('/var/www/cammin...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('CreateDevicesTa...')
+#4 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(299): spl_autoload_call('CreateDevicesTa...')
+#5 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(190): Illuminate\Database\Migrations\Migrator->resolve('2014_07_20_2241...')
+#6 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(170): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#7 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/ResetCommand.php(61): Illuminate\Database\Migrations\Migrator->rollback(false)
+#8 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(112): Illuminate\Database\Console\Migrations\ResetCommand->fire()
+#9 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArrayInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArrayInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(128): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArrayInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RefreshCommand.php(40): Illuminate\Console\Command->call('migrate:reset', Array)
+#13 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(112): Illuminate\Database\Console\Migrations\RefreshCommand->fire()
+#14 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/camminus/vendor/laravel/framework/src/Illuminate/Console/Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(889): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(193): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\RefreshCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#20 {main} [] []

@@ -1,0 +1,58 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "caseslabopened",
+        "designer|userClassName": "cases.lab.Opened",
+        "height": null,
+        "layout": "fit",
+        "title": "My Panel",
+        "width": null
+    },
+    "designerId": "9b118eb9-d67d-4774-aa7a-6eb54bf722c5",
+    "cn": [
+        {
+            "type": "Ext.view.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "itemSelector": "div",
+                "store": "Cases",
+                "width": null
+            },
+            "name": "MyView",
+            "designerId": "9a239350-a418-443a-8051-0ed55057bea9",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "'<tpl for=\".\">',",
+                            "    '<div class=\"dataview-multisort-item\">',",
+                            "        '<img src=\"resources/images/touch-icons/{thumb}\" />',",
+                            "        '<h3>{name}</h3>',",
+                            "    '</div>',",
+                            "'</tpl>'"
+                        ]
+                    },
+                    "name": "tpl32",
+                    "designerId": "47af5ac7-be0d-41a4-b490-1471223480b0"
+                }
+            ]
+        }
+    ]
+}

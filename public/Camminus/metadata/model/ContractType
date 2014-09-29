@@ -1,0 +1,12 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ContractType"
+    },
+    "designerId": "9679bb1f-7e9b-457e-9700-bb82c9ea72dd"
+}

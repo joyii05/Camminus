@@ -1,0 +1,85 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TranslationManager",
+        "views": [
+            "Translation"
+        ]
+    },
+    "designerId": "bff99ba9-482a-42fd-95d7-90dd0b16b4d4",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "translation",
+                "selector": "translation"
+            },
+            "designerId": "e71e4bfd-15c1-4bbf-ba4e-5fb8b92564cb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "translation menuitem",
+                "designer|targetType": "Ext.menu.Item",
+                "fn": "onMenuitemClick",
+                "implHandler": [
+                    "var menu = this.getTranslation();",
+                    "",
+                    "menu.setIconCls(item.iconCls);",
+                    "menu.setText(item.text);",
+                    "",
+                    "localStorage.setItem(\"user-lang\", item.iconCls);",
+                    "",
+                    "window.location.reload();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "98970f70-868c-428a-bbe9-6cfb4e06a833"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "translation",
+                "designer|targetType": "Translation",
+                "fn": "onSplitbuttonBeforeRender",
+                "implHandler": [
+                    "var lang = localStorage ? (localStorage.getItem('user-lang') || 'pt_BR') : 'pt_BR';",
+                    "",
+                    "component.iconCls = lang;",
+                    "",
+                    "if (lang == 'en'){",
+                    "    component.text = 'English';",
+                    "} else if (lang == 'es'){",
+                    "    component.text = 'Español';",
+                    "} else {",
+                    "    component.text = 'Português';",
+                    "}"
+                ],
+                "name": "beforerender",
+                "scope": "me"
+            },
+            "designerId": "eb795b49-8927-4566-9eeb-f09b8eee5b9d"
+        }
+    ]
+}

@@ -1,0 +1,233 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Menu",
+        "models": [
+            "menu.Item",
+            "menu.Root"
+        ],
+        "stores": [
+            "Menu"
+        ],
+        "views": [
+            "menu.Accordion",
+            "menu.Item"
+        ]
+    },
+    "designerId": "e4f1ea22-ad81-4e27-ba8f-3c006d1307e3",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainmenu",
+                "designer|targetType": "menu.Accordion",
+                "fn": "onPanelRender",
+                "implHandler": [
+                    "this.getMenuStore().load(function(records, op, success){",
+                    "",
+                    "    var menuPanel = Ext.ComponentQuery.query('mainmenu')[0];",
+                    "",
+                    "    Ext.each(records, function(root){",
+                    "",
+                    "",
+                    "        var menu = Ext.create('Camminus.view.menu.Item',{",
+                    "            title: root.get('text'),",
+                    "            iconCls: root.get('iconCls')",
+                    "        });",
+                    "",
+                    "        if(root.items().data.length===2){",
+                    "            menu.maxHeight = 90;",
+                    "        }",
+                    "            else if(root.items().data.length===3){",
+                    "                 menu.maxHeight = 115;",
+                    "            }",
+                    "                else if(root.items().data.length===4){",
+                    "                     menu.maxHeight = 145;",
+                    "                }",
+                    "                    else{",
+                    "                        menu.maxHeight = 160;",
+                    "                    }",
+                    "",
+                    "        if (root.get('text')===\"Profile\"){",
+                    "            menu.setTitle(UserData.getName());",
+                    "        }",
+                    "",
+                    "",
+                    "",
+                    "        Ext.each(root.items(), function(itens){",
+                    "",
+                    "            Ext.each(itens.data.items, function(item){",
+                    "",
+                    "                menu.getRootNode().appendChild({",
+                    "                    text: item.get('text'),",
+                    "                    leaf: true,",
+                    "                    iconCls: item.get('iconCls'),",
+                    "                    id: item.get('id'),",
+                    "                    className: item.get('className'),",
+                    "                    classType: item.get('classType')",
+                    "                });",
+                    "            });",
+                    "        });",
+                    "",
+                    "        menuPanel.add(menu);",
+                    "    });",
+                    "});"
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onPanelRender",
+            "designerId": "d2af5c18-4d79-478b-8825-7977375454d3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainPanel",
+                "selector": "mainpanel",
+                "xtype": null
+            },
+            "name": "mainPanel",
+            "designerId": "12306332-3362-4d51-80d0-5060b212d85a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainmenuitem",
+                "designer|targetType": "Ext.tree.Panel",
+                "fn": "onTreepanelItemClick",
+                "implHandler": [
+                    "",
+                    "if (record.raw.classType === 'panel'){",
+                    "",
+                    "",
+                    "    var mainPanel = this.getMainPanel();",
+                    "",
+                    "    var newTab = mainPanel.items.findBy(",
+                    "        function (tab){",
+                    "            return tab.title === record.get('text');",
+                    "        });",
+                    "",
+                    "",
+                    "    if (!newTab){",
+                    "        newTab = mainPanel.add({",
+                    "            xtype: record.raw.className,",
+                    "            closable: true,",
+                    "            iconCls: record.get('iconCls') + '-blue',",
+                    "            title: record.get('text')",
+                    "        });",
+                    "    }",
+                    "",
+                    "    mainPanel.setActiveTab(newTab);",
+                    "",
+                    "}",
+                    "",
+                    "if(record.raw.classType === 'window'){",
+                    "",
+                    "    if(record.raw.className === 'costumersform'){",
+                    "",
+                    "        var win    = this.getCostumersForm(),",
+                    "            record = Ext.create('Camminus.model.Costumer');",
+                    "",
+                    "",
+                    "        if(!win){",
+                    "            win = Ext.widget('costumersform');",
+                    "        }",
+                    "",
+                    "        win.adding = true;",
+                    "",
+                    "        win.down('form').loadRecord(record);",
+                    "",
+                    "        win.show();",
+                    "",
+                    "    }",
+                    "",
+                    "    else if(record.raw.className === 'casesform'){",
+                    "",
+                    "        var win    = this.getCasesForm();",
+                    "       //     record = Ext.create('Camminus.model.Case');",
+                    "",
+                    "",
+                    "        if(!win){",
+                    "            win = Ext.widget('casesform');",
+                    "        }",
+                    "",
+                    "        win.adding = true;",
+                    "",
+                    "       // win.down('form').loadRecord(record);",
+                    "",
+                    "        win.show();",
+                    "",
+                    "    }",
+                    "",
+                    "}"
+                ],
+                "name": "itemclick",
+                "scope": "me"
+            },
+            "name": "onTreepanelItemClick",
+            "designerId": "55cd5833-32a5-44d2-98b0-92d4c817c173"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "costumersForm",
+                "selector": "costumersform"
+            },
+            "name": "costumersForm",
+            "designerId": "18dbca83-7388-4a0d-8780-76f71c328f48"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "casesForm",
+                "selector": "casesform"
+            },
+            "name": "casesForm",
+            "designerId": "0c90874e-cfd0-4c1d-b605-9e99762da96c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "companiesForm",
+                "selector": "companiesform"
+            },
+            "name": "companiesForm",
+            "designerId": "866b7867-5648-419c-97bf-898186cf2bf9"
+        }
+    ]
+}

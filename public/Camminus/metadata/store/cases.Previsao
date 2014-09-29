@@ -1,0 +1,37 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {\"name\":\"24hs\"},",
+            "    {\"name\":\"48hs\"},",
+            "    {\"name\":\"72hs\"},",
+            "    {\"name\":\"96hs\"},",
+            "]",
+            "        "
+        ],
+        "designer|userClassName": "cases.Previsao",
+        "storeId": "cases.Previsao"
+    },
+    "designerId": "146d1e81-1dd2-40db-8c6c-a633cf0cbf4a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField49",
+            "designerId": "993d0fc0-7d93-4b80-b05e-7f252eb829d2"
+        }
+    ]
+}

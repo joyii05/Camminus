@@ -1,0 +1,15 @@
+[2014-09-29 13:04:44] local.ERROR: exception 'InvalidArgumentException' with message 'Command "migrate:tefresh" is not defined.
+
+Did you mean one of these?
+    migrate:refresh
+    migrate:publish
+    migrate:reset
+    migrate:rollback
+    migrate:install
+    migrate
+    migrate:make' in /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php:564
+Stack trace:
+#0 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(190): Symfony\Component\Console\Application->find('migrate:tefresh')
+#1 /var/www/camminus/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /var/www/camminus/artisan(59): Symfony\Component\Console\Application->run()
+#3 {main} [] []
